@@ -95,26 +95,28 @@ h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.45rem,3vw,2.1re
 
 /* карьера */
 .career{border-top:2px solid var(--ink)}
-.career-row{display:grid;grid-template-columns:132px 178px 1fr;gap:clamp(10px,2vw,26px);
-  align-items:center;padding:14px 4px;border-bottom:1px solid var(--hair);transition:background .3s var(--ease)}
+.career-row{display:grid;grid-template-columns:184px 176px 1fr;gap:clamp(10px,2vw,26px);
+  align-items:center;padding:16px 4px;border-bottom:1px solid var(--hair);transition:background .3s var(--ease)}
 .career-row:hover{background:var(--paper-2)}
 .career-row .co{font-weight:700;font-size:15px}
-.logo-box{width:120px;height:44px;display:grid;place-items:center;border:1px solid var(--hair);background:var(--paper);
-  transition:border-color .3s var(--ease),transform .3s var(--ease)}
-.career-row:hover .logo-box{border-color:var(--ink);transform:translateY(-2px)}
-.logo-box svg{display:block;width:104px;height:34px}
-.avatar{width:60px;height:60px;border-radius:50%;flex:none;display:grid;place-items:center;
-  font-family:var(--disp);font-weight:900;font-size:19px;color:var(--paper);background:var(--green);
-  border:2px solid var(--ink)}
-.avatar.b{background:var(--red)}
-.avatar.c{background:var(--ink)}
-.qt-head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
-.qt-head small{display:block;font-size:10px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
+.logo-box{width:172px;height:66px;display:grid;place-items:center;border:1px solid var(--hair);background:var(--paper);
+  transition:border-color .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease)}
+.career-row:hover .logo-box{border-color:var(--ink);transform:translateY(-2px);box-shadow:0 10px 22px -14px rgba(20,20,20,.5)}
+.logo-box svg{display:block;width:152px;height:52px}
+.avatar{width:72px;height:72px;border-radius:50%;flex:none;object-fit:cover;display:block;
+  filter:grayscale(1) contrast(1.05);transition:filter .4s var(--ease),transform .4s var(--ease);background:var(--paper-2)}
+.qt:hover .avatar{filter:grayscale(0) contrast(1);transform:scale(1.04)}
+.qt-head{display:flex;align-items:center;gap:15px;margin-bottom:13px}
 .career-row .ro{font-size:14px}
 .career-row .ro em{display:block;font-style:normal;font-family:var(--disp);font-weight:900;font-size:13px;color:var(--red);margin-top:2px}
 .career-row .de{color:var(--muted);font-size:13.5px}
 .career-row.now{background:#f7efe9}
-@media(max-width:820px){.career-row{grid-template-columns:1fr;gap:3px;padding:14px 4px}.career-row .de{font-size:13px}}
+@media(max-width:820px){
+  .career-row{grid-template-columns:1fr;gap:9px;padding:18px 4px;justify-items:start}
+  .career-row .de{font-size:13px}
+  .logo-box{width:196px;height:74px}
+  .logo-box svg{width:174px;height:58px}
+}
 
 /* образование */
 .edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair)}
@@ -129,7 +131,15 @@ h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.45rem,3vw,2.1re
 .bk b{font-size:16px;line-height:1.3;display:block}
 .bk p{margin-top:7px;font-size:13.5px;color:var(--muted)}
 .bk .st{margin-top:10px;font-size:12px;color:var(--red);font-weight:700}
-.bk a{display:inline-block;margin-top:10px;font-weight:700;font-size:13.5px;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--red)}
+.bk a{display:inline-flex;align-items:center;justify-content:center;gap:9px;margin-top:14px;min-height:48px;
+  padding:13px 24px;font-weight:700;font-size:14.5px;color:var(--paper);background:var(--ink);
+  text-decoration:none;border:2px solid var(--ink);position:relative;overflow:hidden;isolation:isolate;
+  transition:color .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease)}
+.bk a::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.bk a:hover::before{transform:scaleX(1)}
+.bk a:hover{transform:translateY(-2px);box-shadow:0 12px 24px -14px rgba(20,20,20,.5)}
+.bk a span{transition:transform .4s var(--ease)}
+.bk a:hover span{transform:translateX(5px)}
 
 /* соцсети */
 .socials{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair)}
@@ -168,11 +178,14 @@ h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.45rem,3vw,2.1re
 .md .src{font-family:var(--disp);font-weight:900;font-size:16px}
 .md b{display:block;margin-top:6px;font-size:14.5px;line-height:1.35}
 .md p{margin-top:7px;font-size:13px;color:var(--muted)}
-.md .go{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:12px;font-size:12.5px;font-weight:700;
-  color:var(--ink);text-decoration:none;transition:color .3s var(--ease)}
+.md .go{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:auto;
+  min-height:48px;padding:12px 18px;border:2px solid var(--ink);font-size:13.5px;font-weight:700;
+  color:var(--ink);text-decoration:none;transition:color .3s var(--ease),background-color .3s var(--ease)}
+.md .go:hover{background:var(--ink);color:var(--paper)}
 .md .go span{transition:transform .35s var(--ease)}
-.md:hover .go{color:var(--red)}
 .md:hover .go span{transform:translateX(5px)}
+.md .in{gap:0}
+.md .go{margin-top:16px}
 
 /* форматы выступлений */
 .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
@@ -204,8 +217,8 @@ h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.45rem,3vw,2.1re
 .risk span{display:block;font-family:var(--sans);font-weight:400;font-size:13.5px;color:var(--muted);margin-top:4px}
 
 /* кнопки */
-.btn{position:relative;display:inline-flex;align-items:center;gap:11px;font-weight:700;font-size:14.5px;
-  padding:14px 26px;border:2px solid var(--ink);cursor:pointer;text-decoration:none;background:var(--ink);color:var(--paper);
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:11px;font-weight:700;font-size:15.5px;
+  padding:17px 30px;min-height:54px;border:2px solid var(--ink);cursor:pointer;text-decoration:none;background:var(--ink);color:var(--paper);
   overflow:hidden;isolation:isolate;transition:color .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease)}
 .btn .arr{transition:transform .4s var(--ease)}
 .btn:hover .arr{transform:translateX(6px)}
@@ -228,6 +241,24 @@ h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.45rem,3vw,2.1re
 footer{background:var(--ink);color:#8b8b84;font-size:12.5px;border-top:1px solid rgba(252,252,250,.18)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;padding-bottom:24px}
 footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(252,252,250,.3)}
+
+/* мобильная версия: крупные кнопки во всю ширину, по центру */
+@media(max-width:680px){
+  .cta-row{gap:11px;width:100%}
+  .cta-row .btn{width:100%;min-height:58px;font-size:16px;padding:18px 22px}
+  .bk{grid-template-columns:1fr;justify-items:center;text-align:center}
+  .bk svg{max-width:150px}
+  .bk a{width:100%;min-height:56px;font-size:15.5px}
+  .bk .st{text-align:center}
+  .md .go{min-height:54px;font-size:14.5px}
+  .qt-head{flex-direction:column;align-items:center;text-align:center;gap:11px}
+  .avatar{width:88px;height:88px}
+  .qt{text-align:center}
+  .risk .wrap{flex-direction:column;align-items:stretch;text-align:center}
+  .risk .btn{width:100%}
+  .tags{justify-content:center}
+  .socials .soc{padding:20px 18px;min-height:96px}
+}
 
 .js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
@@ -450,7 +481,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
           <b>«Как инвестировать в недвижимость»</b>
           <p>Системный взгляд практика: от первой сделки до портфельного подхода.</p>
           <div class="st">★★★★★ Книга-бестселлер в категории «Недвижимость» 2004–2005 годов · «Альпина Бизнес Букс», «Озон», «Библио-глобус»</div>
-          <a href="#contact">Скачать бесплатно →</a>
+          <a href="https://t.me/artemtsogoev" target="_blank" rel="noopener">Скачать бесплатно <span>→</span></a>
         </div>
       </div>
       <div class="bk">
@@ -467,7 +498,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
           <b>Актуальная версия классики деловой литературы в новом формате</b>
           <p>Переработанное издание с учётом сегодняшнего рынка: инструменты, налоги, коллективные инвестиции.</p>
           <div class="st">★★★★★ Актуальная версия классики деловой литературы</div>
-          <a href="#contact">Скачать бесплатно →</a>
+          <a href="https://t.me/artemtsogoev" target="_blank" rel="noopener">Скачать бесплатно <span>→</span></a>
         </div>
       </div>
     </div>
@@ -503,22 +534,22 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
     <div class="quotes">
       <div class="qt">
         <div class="qt-head">
-          <div class="avatar" aria-hidden="true">АК</div>
-          <div class="who">Александр Козлов<span>Коммерческий директор Концерна «Русич»</span><small>фото с текущего сайта</small></div>
+          <img class="avatar" src="https://static.tildacdn.com/tild6339-3630-4130-b265-333536373965/-/resize/300x/photo.jpg" alt="Александр Козлов" loading="lazy" width="72" height="72">
+          <div class="who">Александр Козлов<span>Коммерческий директор Концерна «Русич»</span></div>
         </div>
         <div class="q">Вдумчивый и чрезвычайно профессиональный подход, чувствуется многолетний опыт Артёма в сфере недвижимости и инвестиций</div>
       </div>
       <div class="qt">
         <div class="qt-head">
-          <div class="avatar b" aria-hidden="true">АП</div>
-          <div class="who">Андрей Прокофьев<span>Ветеран рынка коллективных инвестиций в недвижимость</span><small>фото с текущего сайта</small></div>
+          <img class="avatar" src="https://static.tildacdn.com/tild6465-3537-4536-b539-333038643036/-/resize/300x/1.jpg" alt="Андрей Прокофьев" loading="lazy" width="72" height="72">
+          <div class="who">Андрей Прокофьев<span>Ветеран рынка коллективных инвестиций в недвижимость</span></div>
         </div>
         <div class="q">Артём — авторитет во всём, что касается инвестиций в недвижимость. Он предлагает умные, практичные и современные методы управления капиталом</div>
       </div>
       <div class="qt">
         <div class="qt-head">
-          <div class="avatar c" aria-hidden="true">ОЛ</div>
-          <div class="who">Олег Лукьянычев<span>Экс-председатель правления ПФС-Банка</span><small>фото с текущего сайта</small></div>
+          <img class="avatar" src="https://static.tildacdn.com/tild3139-3766-4837-b364-383039646263/-/resize/300x/photo.jpg" alt="Олег Лукьянычев" loading="lazy" width="72" height="72">
+          <div class="who">Олег Лукьянычев<span>Экс-председатель правления ПФС-Банка</span></div>
         </div>
         <div class="q">С Артёмом знаком давно. Он зарекомендовал себя в качестве профессионального и ответственного эксперта-практика в сфере недвижимости и инвестиций</div>
       </div>
