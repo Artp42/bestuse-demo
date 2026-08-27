@@ -201,6 +201,21 @@ h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.45rem,3vw,2.1re
 .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
 .tags span{border:1.5px solid var(--ink);padding:7px 14px;font-size:13.5px;font-weight:600}
 
+/* лента логотипов */
+.logostrip{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--hair);
+  border:1px solid var(--hair);margin-top:22px}
+.logostrip .cell{background:var(--paper);display:grid;place-items:center;padding:20px 16px;min-height:96px;
+  transition:background .35s var(--ease)}
+.logostrip .cell:hover{background:var(--paper-2)}
+.logostrip img{max-width:100%;max-height:52px;width:auto;height:auto;display:block;
+  filter:grayscale(1) contrast(.9) opacity(.75);transition:filter .4s var(--ease),transform .4s var(--ease)}
+.logostrip .cell:hover img{filter:grayscale(0) contrast(1) opacity(1);transform:scale(1.05)}
+@media(max-width:520px){
+  .logostrip{grid-template-columns:1fr 1fr}
+  .logostrip .cell{min-height:84px;padding:16px 12px}
+  .logostrip img{max-height:44px}
+}
+
 /* услуги */
 .svc{border-top:2px solid var(--ink)}
 .svc-row{display:grid;grid-template-columns:52px minmax(0,4fr) minmax(0,6fr) auto;gap:clamp(10px,2.2vw,30px);align-items:baseline;
@@ -335,8 +350,8 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 
 <div class="stats">
   <div class="wrap">
-    <div class="stat rv"><b>1996</b><span>год начала работы на рынке недвижимости</span></div>
-    <div class="stat rv"><b>20<i>+</i></b><span>лет в инвестициях и недвижимости</span></div>
+    <div class="stat rv"><b>30 <i>лет</i></b><span>на рынке недвижимости — с 1996 года</span></div>
+    <div class="stat rv"><b>21 <i>год</i></b><span>в инвестициях и фондах недвижимости</span></div>
     <div class="stat rv"><b>CCIM</b><span>Чикагский институт коммерческих инвестиций</span></div>
     <div class="stat rv"><b>14<i>k+</i></b><span>читателей Telegram-канала</span></div>
     <div class="stat rv"><b>8</b><span>проектов в публичном портфолио</span></div>
@@ -346,7 +361,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 <section id="skills">
   <div class="wrap rv">
     <span class="chartnum">01 <i>|</i> Ключевые компетенции</span>
-    <h2 class="big">Именно об этом он размышляет, пишет и рассказывает</h2>
+    <h2 class="big">Тридцать лет практики: именно об этом он размышляет, пишет и рассказывает</h2>
     <div class="skills">
       <div class="skill">
         <b>Недвижи<i>мость</i></b>
@@ -364,66 +379,74 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 
     <!-- фирменный приём: дуги входят справа и выпрямляются в строки данных -->
     <div style="margin-top:34px">
-      <svg class="figsvg fig-desk" viewBox="0 0 1040 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Распределение карьеры по направлениям">
+      <svg class="figsvg fig-desk" viewBox="0 0 1040 336" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Распределение карьеры по направлениям">
         <g fill="none" stroke-linecap="butt">
-          <path d="M270 52 H648 A312 312 0 0 0 960 -260" stroke="#1d5c45" stroke-width="19"/>
-          <path d="M270 105 H648 A365 365 0 0 0 1013 -260" stroke="#2c7a5c" stroke-width="19"/>
-          <path d="M270 158 H648 A418 418 0 0 0 1066 -260" stroke="#1d5c45" stroke-width="19"/>
-          <path d="M270 211 H648 A471 471 0 0 0 1119 -260" stroke="#2c7a5c" stroke-width="19"/>
-          <path d="M270 264 H648 A524 524 0 0 0 1172 -260" stroke="#1d5c45" stroke-width="19"/>
-          <path d="M270 52 H620" stroke="#cf4a2c" stroke-width="19"/>
-          <path d="M270 105 H395" stroke="#cf4a2c" stroke-width="19"/>
-          <path d="M270 158 H370" stroke="#cf4a2c" stroke-width="19"/>
-          <path d="M270 211 H320" stroke="#cf4a2c" stroke-width="19"/>
-          <path d="M270 264 H320" stroke="#cf4a2c" stroke-width="19"/>
+          <path d="M270 42 H648 A312 312 0 0 0 960 -270" stroke="#141414" stroke-width="21"/>
+          <path d="M270 96 H648 A366 366 0 0 0 1014 -270" stroke="#1d5c45" stroke-width="19"/>
+          <path d="M270 148 H648 A418 418 0 0 0 1066 -270" stroke="#2c7a5c" stroke-width="19"/>
+          <path d="M270 200 H648 A470 470 0 0 0 1118 -270" stroke="#1d5c45" stroke-width="19"/>
+          <path d="M270 252 H648 A522 522 0 0 0 1170 -270" stroke="#2c7a5c" stroke-width="19"/>
+          <path d="M270 304 H648 A574 574 0 0 0 1222 -270" stroke="#1d5c45" stroke-width="19"/>
+          <path d="M270 42 H660" stroke="#cf4a2c" stroke-width="21"/>
+          <path d="M270 96 H543" stroke="#cf4a2c" stroke-width="19"/>
+          <path d="M270 148 H426" stroke="#cf4a2c" stroke-width="19"/>
+          <path d="M270 200 H348" stroke="#cf4a2c" stroke-width="19"/>
+          <path d="M270 252 H322" stroke="#cf4a2c" stroke-width="19"/>
+          <path d="M270 304 H309" stroke="#cf4a2c" stroke-width="19"/>
         </g>
         <g font-family="Golos Text, Arial" font-size="14.5" fill="#141414" text-anchor="end" font-weight="600">
-          <text x="258" y="57">Инвестиции, фонды, ЗПИФ</text>
-          <text x="258" y="110">Продажи и брокеридж</text>
-          <text x="258" y="163">Медиа, обучение, консалтинг</text>
-          <text x="258" y="216">Земельные активы</text>
-          <text x="258" y="269">Девелопмент и редевелопмент</text>
+          <text x="258" y="47">Всего на рынке недвижимости</text>
+          <text x="258" y="101">Инвестиции, фонды, ЗПИФ</text>
+          <text x="258" y="153">Продажи и брокеридж</text>
+          <text x="258" y="205">Девелопмент и редевелопмент</text>
+          <text x="258" y="257">Медиа, обучение, консалтинг</text>
+          <text x="258" y="309">Земельные активы</text>
         </g>
         <g font-family="Golos Text, Arial" font-size="13.5" font-weight="700" fill="#cf4a2c">
-          <text x="632" y="57">14 лет</text>
-          <text x="407" y="110">5 лет</text>
-          <text x="382" y="163">4 года</text>
-          <text x="332" y="216">2 года</text>
-          <text x="332" y="269">2 года</text>
+          <text x="672" y="47">30 лет</text>
+          <text x="555" y="101">21 год</text>
+          <text x="438" y="153">12 лет</text>
+          <text x="360" y="205">6 лет</text>
+          <text x="334" y="257">4 года</text>
+          <text x="321" y="309">3 года</text>
         </g>
       </svg>
 
       <!-- мобильный вариант: подписи над полосами, помещается целиком без прокрутки -->
-      <svg class="figsvg fig-mob" viewBox="0 0 340 372" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Распределение карьеры по направлениям">
+      <svg class="figsvg fig-mob" viewBox="0 0 340 428" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Распределение карьеры по направлениям">
         <g fill="none" stroke-linecap="butt">
-          <path d="M0 44 H236 Q302 44 320 -14" stroke="#1d5c45" stroke-width="17"/>
-          <path d="M0 112 H244 Q310 112 328 54" stroke="#2c7a5c" stroke-width="17"/>
-          <path d="M0 180 H252 Q318 180 336 122" stroke="#1d5c45" stroke-width="17"/>
-          <path d="M0 248 H260 Q326 248 344 190" stroke="#2c7a5c" stroke-width="17"/>
-          <path d="M0 316 H268 Q334 316 352 258" stroke="#1d5c45" stroke-width="17"/>
-          <path d="M0 44 H196" stroke="#cf4a2c" stroke-width="17"/>
-          <path d="M0 112 H70" stroke="#cf4a2c" stroke-width="17"/>
-          <path d="M0 180 H56" stroke="#cf4a2c" stroke-width="17"/>
-          <path d="M0 248 H28" stroke="#cf4a2c" stroke-width="17"/>
-          <path d="M0 316 H28" stroke="#cf4a2c" stroke-width="17"/>
+          <path d="M0 42 H232 Q300 42 318 -16" stroke="#141414" stroke-width="19"/>
+          <path d="M0 110 H240 Q308 110 326 52" stroke="#1d5c45" stroke-width="17"/>
+          <path d="M0 178 H248 Q316 178 334 120" stroke="#2c7a5c" stroke-width="17"/>
+          <path d="M0 246 H256 Q324 246 342 188" stroke="#1d5c45" stroke-width="17"/>
+          <path d="M0 314 H264 Q332 314 350 256" stroke="#2c7a5c" stroke-width="17"/>
+          <path d="M0 382 H272 Q340 382 358 324" stroke="#1d5c45" stroke-width="17"/>
+          <path d="M0 42 H212" stroke="#cf4a2c" stroke-width="19"/>
+          <path d="M0 110 H148" stroke="#cf4a2c" stroke-width="17"/>
+          <path d="M0 178 H85" stroke="#cf4a2c" stroke-width="17"/>
+          <path d="M0 246 H42" stroke="#cf4a2c" stroke-width="17"/>
+          <path d="M0 314 H28" stroke="#cf4a2c" stroke-width="17"/>
+          <path d="M0 382 H21" stroke="#cf4a2c" stroke-width="17"/>
         </g>
         <g font-family="Golos Text, Arial" font-size="13" font-weight="600" fill="#141414">
-          <text x="0" y="28">Инвестиции, фонды, ЗПИФ</text>
-          <text x="0" y="96">Продажи и брокеридж</text>
-          <text x="0" y="164">Медиа, обучение, консалтинг</text>
-          <text x="0" y="232">Земельные активы</text>
-          <text x="0" y="300">Девелопмент и редевелопмент</text>
+          <text x="0" y="26">Всего на рынке недвижимости</text>
+          <text x="0" y="94">Инвестиции, фонды, ЗПИФ</text>
+          <text x="0" y="162">Продажи и брокеридж</text>
+          <text x="0" y="230">Девелопмент и редевелопмент</text>
+          <text x="0" y="298">Медиа, обучение, консалтинг</text>
+          <text x="0" y="366">Земельные активы</text>
         </g>
         <g font-family="Golos Text, Arial" font-size="12.5" font-weight="700" fill="#cf4a2c">
-          <text x="204" y="49">14 лет</text>
-          <text x="78" y="117">5 лет</text>
-          <text x="64" y="185">4 года</text>
-          <text x="36" y="253">2 года</text>
-          <text x="36" y="321">2 года</text>
+          <text x="220" y="47">30 лет</text>
+          <text x="156" y="115">21 год</text>
+          <text x="93" y="183">12 лет</text>
+          <text x="50" y="251">6 лет</text>
+          <text x="36" y="319">4 года</text>
+          <text x="29" y="387">3 года</text>
         </g>
       </svg>
     </div>
-    <div class="sec-note">Инвестиции: ЦЕРИХ, BLACKWOOD, ТРИНФИКО, SimpleEstate. Продажи: GALAXY GROUP, UNIKVART. Земля: Банк Платина, Knight Frank. Девелопмент: ОРГБАНК. Медиа и обучение: образовательная платформа с 2022 года и STONE с 04.2026. Периоды пересекаются, поэтому сумма больше календарного стажа. На рынке недвижимости — с 1996 года.</div>
+    <div class="sec-note">На рынке недвижимости с 1996 года. Инвестиции и фонды — с 2004-го: ЦЕРИХ, BLACKWOOD, ТРИНФИКО, SimpleEstate, STONE. Продажи и брокеридж: GALAXY GROUP, UNIKVART и ранние проекты. Девелопмент и редевелопмент: ОРГБАНК, ЖК «Грильяж», «Орехово. Дом у парка». Земельные активы: Банк Платина, Knight Frank. Направления пересекаются по годам, поэтому сумма больше календарного стажа.</div>
   </div>
 </section>
 
@@ -639,6 +662,17 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
       <div class="q">Артём Цогоев — признанный эксперт в сфере недвижимости и инвестиций, имеющий свой собственный взгляд на многие освещаемые СМИ вопросы. Обращаясь к Артёму, всегда можно рассчитывать на максимально оперативный, исчерпывающе полный и профессиональный, но при этом интересный комментарий</div>
       <div class="who">Людмила Ломакина / Дудиева<span>Продюсер Business FM</span></div>
     </div>
+    <div class="logostrip">
+      <div class="cell"><img src="https://static.tildacdn.com/tild6339-3466-4363-a331-613162316534/forbes.png" alt="Forbes" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild3539-3964-4030-b566-316664376165/Kommersant-1.jpg" alt="Коммерсантъ" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild3564-3236-4365-a137-343131313066/vedomosti_wite.png" alt="Ведомости" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild3635-3962-4038-b162-356336303564/bfm-white.jpg" alt="Business FM" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild6161-6431-4364-b461-306333376333/cre.jpg" alt="CRE" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild3731-3030-4132-a164-316365383061/banki.jpg" alt="Банки.ру" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild3466-6334-4333-b431-386464623066/stroygazeta.jpg" alt="Строительная газета" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild3231-3165-4331-b536-306334643663/Untitled.jpg" alt="Издание-партнёр" loading="lazy"></div>
+    </div>
+
     <h2 class="big">Примеры сотрудничества со СМИ</h2>
     <div class="media-grid">
       <div class="md">
@@ -713,6 +747,17 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
       <span>Конференции</span><span>Онлайн-мероприятия</span><span>Частные семинары</span>
       <span>Корпоративные семинары</span><span>Воркшопы</span><span>Модерация</span>
     </div>
+    <div class="logostrip">
+      <div class="cell"><img src="https://static.tildacdn.com/tild3330-3133-4663-b032-316462313162/8974ed6ada4a18e24871.jpg" alt="Конференция" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild6131-6366-4631-a463-383030386436/4a2b0731ab9136eee30f.jpg" alt="Конференция" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild3336-6235-4464-b034-666163363331/LogoPEMA2021-topspac.png" alt="PEMA 2021" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild3030-6435-4063-a664-303066363434/photo.jpg" alt="Конференция" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild6535-3561-4830-a338-633838373736/aside-logo.gif" alt="Конференция" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild3435-3764-4135-a233-656632373464/15831444415605.png" alt="Конференция" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild6538-3137-4863-b236-623532326338/logo2.jpg" alt="Конференция" loading="lazy"></div>
+      <div class="cell"><img src="https://static.tildacdn.com/tild3931-6266-4638-a537-666134326662/96c86123378c8a63e219.jpg" alt="Конференция" loading="lazy"></div>
+    </div>
+
     <div class="cta-row">
       <a class="btn" href="https://t.me/artemtsogoev" target="_blank" rel="noopener">Пригласить Артёма выступить <span class="arr">→</span></a>
       <a class="btn btn-ol" href="https://t.me/atsogoev" target="_blank" rel="noopener">Посмотреть выступления</a>
