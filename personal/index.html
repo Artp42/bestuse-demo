@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Артём Цогоев — эксперт по инвестициям в недвижимость</title>
-<meta name="description" content="Кто такой Артём Цогоев: 20+ лет на рынке недвижимости, инвестиционный директор УК «Тринфико», две книги, Best Use-анализ, обучение, СМИ.">
+<title>Артём Цогоев — недвижимость и инвестиции, ведущий эксперт в России</title>
+<meta name="description" content="Артём Цогоев: ведущий эксперт по инвестициям в недвижимость в России. Инвестиционный консультант STONE, член совета директоров SimpleEstate, CCIM, автор книг, спикер и колумнист деловых СМИ.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Артём Цогоев · Data Edition">
-<meta property="og:description" content="20+ лет на рынке недвижимости: карьера, книги, проекты, СМИ, услуги. Демо-макет нового личного сайта в стиле дата-издания.">
+<meta property="og:description" content="20+ лет на рынке недвижимости и инвестиций: карьера, проекты, книги, СМИ, услуги. Демо-макет нового сайта.">
 <meta property="og:url" content="https://artp42.github.io/bestuse-demo/personal/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141414'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%23fcfcfa'%3E%D0%90%D0%A6%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,6 @@
   --red:#cf4a2c;
   --green:#1d5c45;
   --green-2:#2c7a5c;
-  --line:#141414;
   --hair:rgba(20,20,20,.16);
   --muted:#5c5c56;
   --disp:'Piazzolla', Georgia, 'Times New Roman', serif;
@@ -34,14 +33,14 @@ body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:
 a{color:inherit}
 .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
 
-/* газетная строка */
-.strip{border-bottom:2px solid var(--line)}
-.strip .wrap{display:flex;justify-content:space-between;gap:16px;align-items:center;height:46px;
+.strip{border-bottom:2px solid var(--ink)}
+.strip .wrap{display:flex;justify-content:space-between;gap:16px;align-items:center;height:44px;
   font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
 .strip .right{color:var(--muted);font-weight:500}
 @media(max-width:640px){.strip .right{display:none}}
-.mainnav{border-bottom:2px solid var(--line);background:var(--paper)}
-.mainnav .wrap{display:flex;gap:22px;align-items:center;height:44px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+
+.mainnav{border-bottom:2px solid var(--ink);position:sticky;top:0;z-index:40;background:var(--paper)}
+.mainnav .wrap{display:flex;gap:20px;align-items:center;height:44px;overflow-x:auto;white-space:nowrap;scrollbar-width:none}
 .mainnav .wrap::-webkit-scrollbar{display:none}
 .mainnav a{text-decoration:none;font-size:13px;font-weight:600;color:var(--muted);position:relative;padding:3px 0;transition:color .3s var(--ease)}
 .mainnav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:right;transition:transform .35s var(--ease)}
@@ -49,106 +48,145 @@ a{color:inherit}
 .mainnav a:hover::after{transform:scaleX(1);transform-origin:left}
 
 /* титул */
-.masthead{border-bottom:2px solid var(--line)}
-.masthead .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(24px,4vw,64px);
-  padding-top:clamp(34px,6vh,70px);padding-bottom:clamp(30px,5vh,56px);align-items:end}
+.masthead{border-bottom:2px solid var(--ink)}
+.masthead .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:clamp(24px,4vw,60px);
+  padding-top:clamp(30px,5vh,60px);padding-bottom:clamp(28px,4vh,48px);align-items:end}
 h1.title{font-family:var(--disp);font-weight:900;line-height:.94;letter-spacing:-.015em;
-  font-size:clamp(3rem,10.5vw,5.6rem);text-transform:uppercase}
-.title-sub{margin-top:20px;font-size:12px;font-weight:700;letter-spacing:.2em}
-.intro{margin-top:14px;max-width:46ch;font-size:15.5px;line-height:1.55}
-.intro em{font-style:normal;color:var(--red);font-weight:600}
-.byline{margin-top:18px;font-size:12.5px;color:var(--muted)}
-.portrait{position:relative;border:2px solid var(--line);background:var(--paper-2)}
+  font-size:clamp(2.7rem,9.5vw,5.2rem);text-transform:uppercase}
+.title-sub{margin-top:18px;font-size:12px;font-weight:700;letter-spacing:.2em}
+.claims{margin-top:16px;list-style:none;display:grid;gap:7px;max-width:52ch}
+.claims li{font-size:14.5px;padding-left:22px;position:relative;line-height:1.45}
+.claims li::before{content:"";position:absolute;left:0;top:.5em;width:9px;height:9px;background:var(--red)}
+.claims li b{font-weight:700}
+.portrait{border:2px solid var(--ink);background:var(--paper-2);position:relative}
 .portrait svg{display:block;width:100%;height:auto}
 .portrait .cap{position:absolute;left:0;right:0;bottom:0;background:var(--ink);color:var(--paper);
-  font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px}
-@media(max-width:820px){.masthead .wrap{grid-template-columns:1fr}.portrait{max-width:340px}}
+  font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;padding:6px 11px}
+@media(max-width:820px){.masthead .wrap{grid-template-columns:1fr}.portrait{max-width:320px}}
 
-/* цифры */
-.stats{border-bottom:2px solid var(--line)}
-.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:clamp(22px,3vw,38px) clamp(12px,2vw,26px);border-right:1px solid var(--hair)}
+.stats{border-bottom:2px solid var(--ink)}
+.stats .wrap{display:grid;grid-template-columns:repeat(5,1fr)}
+.stat{padding:clamp(18px,2.6vw,32px) clamp(10px,1.6vw,22px);border-right:1px solid var(--hair)}
 .stat:first-child{padding-left:0}
 .stat:last-child{border-right:none}
-.stat b{display:block;font-family:var(--disp);font-weight:900;font-size:clamp(1.5rem,2.8vw,2.2rem)}
+.stat b{display:block;font-family:var(--disp);font-weight:900;font-size:clamp(1.3rem,2.4vw,1.95rem);line-height:1.05}
 .stat b i{font-style:normal;color:var(--red)}
-.stat span{font-size:13.5px;color:var(--muted)}
-@media(max-width:760px){.stats .wrap{grid-template-columns:1fr 1fr}.stat{border-right:none;border-bottom:1px solid var(--hair);padding-left:0}}
+.stat span{font-size:12.5px;color:var(--muted);display:block;margin-top:5px}
+@media(max-width:820px){.stats .wrap{grid-template-columns:1fr 1fr}.stat{border-right:none;border-bottom:1px solid var(--hair);padding-left:0}}
 
 .chartnum{display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);
   font-size:12.5px;font-weight:700;letter-spacing:.08em;padding:7px 14px;text-transform:uppercase}
 .chartnum i{font-style:normal;opacity:.6}
-section{border-bottom:2px solid var(--line)}
-section .wrap{padding-top:clamp(34px,5vh,60px);padding-bottom:clamp(34px,5vh,60px)}
+section{border-bottom:2px solid var(--ink)}
+section .wrap{padding-top:clamp(32px,5vh,56px);padding-bottom:clamp(32px,5vh,56px)}
 .sec-note{margin-top:12px;font-size:11.5px;color:var(--muted)}
-h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.5rem,3.2vw,2.2rem);margin:18px 0 22px}
-
-/* 01 дуги-бары */
+h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.45rem,3vw,2.1rem);margin:16px 0 20px;line-height:1.1}
+.lead{max-width:70ch;color:var(--muted);margin-bottom:22px;font-size:15.5px}
 .figsvg{display:block;width:100%;height:auto}
 
-/* 02 карьера */
-.career{border-top:2px solid var(--line)}
-.career-row{display:grid;grid-template-columns:110px minmax(0,3fr) minmax(0,5fr);gap:clamp(12px,2.4vw,36px);
-  align-items:baseline;padding:18px 4px;border-bottom:1px solid var(--hair);transition:background .3s var(--ease)}
+/* компетенции */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0;border:1px solid var(--hair)}
+.skill{padding:24px 22px;border-right:1px solid var(--hair)}
+.skill:last-child{border-right:none}
+.skill b{display:block;font-family:var(--disp);font-weight:900;font-size:20px;margin-bottom:10px}
+.skill b i{font-style:normal;color:var(--red)}
+.skill p{font-size:14px;color:var(--muted)}
+@media(max-width:760px){.skill{border-right:none;border-bottom:1px solid var(--hair)}.skill:last-child{border-bottom:none}}
+
+/* карьера */
+.career{border-top:2px solid var(--ink)}
+.career-row{display:grid;grid-template-columns:150px 190px 1fr;gap:clamp(10px,2vw,28px);
+  align-items:baseline;padding:15px 4px;border-bottom:1px solid var(--hair);transition:background .3s var(--ease)}
 .career-row:hover{background:var(--paper-2)}
-.career-row .yr{font-family:var(--disp);font-weight:900;font-size:17px;color:var(--red)}
-.career-row b{font-size:16.5px}
-.career-row span{color:var(--muted);font-size:14px}
-@media(max-width:700px){.career-row{grid-template-columns:80px 1fr}.career-row span{grid-column:2}}
+.career-row .co{font-weight:700;font-size:15px}
+.career-row .ro{font-size:14px}
+.career-row .ro em{display:block;font-style:normal;font-family:var(--disp);font-weight:900;font-size:13px;color:var(--red);margin-top:2px}
+.career-row .de{color:var(--muted);font-size:13.5px}
+.career-row.now{background:#f7efe9}
+@media(max-width:820px){.career-row{grid-template-columns:1fr;gap:3px;padding:14px 4px}.career-row .de{font-size:13px}}
 
-/* 03 книги */
-.books{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(20px,3vw,44px)}
-.bk{display:grid;grid-template-columns:130px 1fr;gap:20px;align-items:start}
+/* образование */
+.edu{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair)}
+.edu div{background:var(--paper);padding:18px 18px}
+.edu b{display:block;font-size:14.5px;margin-bottom:4px}
+.edu span{font-size:12.5px;color:var(--muted)}
+
+/* книги */
+.books{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(20px,3vw,40px)}
+.bk{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start}
 .bk svg{display:block;width:100%;height:auto;filter:drop-shadow(0 14px 24px rgba(20,20,20,.22))}
-.bk b{font-size:16.5px}
-.bk p{margin-top:8px;font-size:13.5px;color:var(--muted)}
-.bk a{display:inline-block;margin-top:12px;font-weight:700;font-size:13.5px;color:var(--red);text-decoration:none;border-bottom:2px solid var(--red)}
+.bk b{font-size:16px;line-height:1.3;display:block}
+.bk p{margin-top:7px;font-size:13.5px;color:var(--muted)}
+.bk .st{margin-top:10px;font-size:12px;color:var(--red);font-weight:700}
+.bk a{display:inline-block;margin-top:10px;font-weight:700;font-size:13.5px;color:var(--ink);text-decoration:none;border-bottom:2px solid var(--red)}
 
-/* 04 сми */
-.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair)}
-.media-cell{background:var(--paper);padding:22px 18px;transition:background .3s var(--ease)}
-.media-cell:hover{background:var(--paper-2)}
-.media-cell b{display:block;font-family:var(--disp);font-weight:900;font-size:18px}
-.media-cell span{font-size:12.5px;color:var(--muted)}
+/* соцсети */
+.socials{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--hair);border:1px solid var(--hair)}
+.soc{background:var(--paper);padding:22px 20px;text-decoration:none;display:block;transition:background .3s var(--ease)}
+.soc:hover{background:var(--paper-2)}
+.soc b{display:block;font-family:var(--disp);font-weight:900;font-size:19px}
+.soc span{font-size:13px;color:var(--muted)}
+.soc em{display:block;margin-top:9px;font-style:normal;font-size:12.5px;font-weight:700;color:var(--red)}
 
-/* 05 проекты */
-.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(16px,2.4vw,28px)}
+/* отзывы */
+.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(18px,2.6vw,32px)}
+.qt{border-top:3px solid var(--ink);padding-top:14px}
+.qt .q{font-size:15px;line-height:1.45}
+.qt .q::before{content:"«";color:var(--red)}
+.qt .q::after{content:"»";color:var(--red)}
+.qt .who{margin-top:11px;font-size:13px;font-weight:700}
+.qt .who span{display:block;font-weight:400;color:var(--muted);font-size:12.5px}
+
+/* проекты */
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:clamp(14px,2.2vw,24px)}
 .proj{border:1px solid var(--hair);transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease)}
 .proj:hover{transform:translateY(-5px);box-shadow:0 20px 40px -24px rgba(20,20,20,.35);border-color:var(--ink)}
 .proj svg{display:block;width:100%;height:auto}
-.proj .pb{padding:16px 18px 20px}
-.proj b{font-size:15.5px}
-.proj span{display:block;margin-top:6px;font-size:13px;color:var(--muted)}
+.proj .pb{padding:14px 16px 18px}
+.proj b{font-size:15px}
+.proj span{display:block;margin-top:5px;font-size:12.5px;color:var(--muted)}
+.proj em{display:block;margin-top:7px;font-style:normal;font-family:var(--disp);font-weight:900;font-size:13px;color:var(--red)}
 
-/* цитата */
-.quote{border-left:none;max-width:760px}
-.quote .q{font-family:var(--disp);font-weight:900;font-size:clamp(1.25rem,2.6vw,1.8rem);line-height:1.3}
-.quote .q::before{content:"«";color:var(--red)}
-.quote .q::after{content:"»";color:var(--red)}
-.quote .who{margin-top:14px;font-size:13.5px;color:var(--muted)}
+/* сми */
+.media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(16px,2.4vw,28px)}
+.md{border-top:3px solid var(--ink);padding-top:13px}
+.md .src{font-family:var(--disp);font-weight:900;font-size:17px}
+.md b{display:block;margin-top:7px;font-size:15px;line-height:1.35}
+.md p{margin-top:7px;font-size:13px;color:var(--muted)}
+.md a{display:inline-block;margin-top:9px;font-size:12.5px;font-weight:700;color:var(--red);text-decoration:none;border-bottom:1.5px solid var(--red)}
+
+/* форматы выступлений */
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
+.tags span{border:1.5px solid var(--ink);padding:7px 14px;font-size:13.5px;font-weight:600}
 
 /* услуги */
-.svc{border-top:2px solid var(--line)}
-.svc-row{display:grid;grid-template-columns:64px minmax(0,4fr) minmax(0,6fr) auto;gap:clamp(12px,2.4vw,36px);align-items:baseline;
-  padding:19px 4px;border-bottom:1px solid var(--hair);transition:background .3s var(--ease)}
+.svc{border-top:2px solid var(--ink)}
+.svc-row{display:grid;grid-template-columns:52px minmax(0,4fr) minmax(0,6fr) auto;gap:clamp(10px,2.2vw,30px);align-items:baseline;
+  padding:17px 4px;border-bottom:1px solid var(--hair);transition:background .3s var(--ease)}
 .svc-row:hover{background:var(--paper-2)}
-.svc-row .n{font-family:var(--disp);font-weight:900;font-size:19px;color:var(--red)}
-.svc-row h3{font-size:16.5px;font-weight:700}
+.svc-row .n{font-family:var(--disp);font-weight:900;font-size:18px;color:var(--red)}
+.svc-row h3{font-size:16px;font-weight:700}
 .svc-row .d{color:var(--muted);font-size:13.5px}
-.svc-row .p{font-weight:700;white-space:nowrap}
-@media(max-width:760px){.svc-row{grid-template-columns:44px 1fr}.svc-row .d{grid-column:2}.svc-row .p{grid-column:2}}
+.svc-row .p{font-weight:700;white-space:nowrap;font-size:14.5px}
+@media(max-width:760px){.svc-row{grid-template-columns:40px 1fr}.svc-row .d,.svc-row .p{grid-column:2}}
 
-/* статьи */
-.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(16px,2.4vw,28px)}
-.post{border-top:3px solid var(--ink);padding-top:14px;transition:border-color .3s var(--ease)}
+/* блог */
+.posts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(16px,2.4vw,28px)}
+.post{border-top:3px solid var(--ink);padding-top:13px;transition:border-color .3s var(--ease)}
 .post:hover{border-color:var(--red)}
-.post .tag{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
-.post b{display:block;margin-top:8px;font-size:16px;line-height:1.35}
-.post span{display:block;margin-top:8px;font-size:12.5px;color:var(--muted)}
+.post .dt{font-size:11.5px;font-weight:700;letter-spacing:.08em;color:var(--red)}
+.post p{margin-top:8px;font-size:14px;line-height:1.45}
+
+/* тест риск-профиля */
+.risk{background:var(--paper-2)}
+.risk .wrap{display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap;
+  padding-top:26px;padding-bottom:26px}
+.risk b{font-family:var(--disp);font-weight:900;font-size:clamp(1.1rem,2.2vw,1.5rem)}
+.risk span{display:block;font-family:var(--sans);font-weight:400;font-size:13.5px;color:var(--muted);margin-top:4px}
 
 /* кнопки */
-.btn{position:relative;display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:15px;
-  padding:15px 28px;border:2px solid var(--ink);cursor:pointer;text-decoration:none;background:var(--ink);color:var(--paper);
+.btn{position:relative;display:inline-flex;align-items:center;gap:11px;font-weight:700;font-size:14.5px;
+  padding:14px 26px;border:2px solid var(--ink);cursor:pointer;text-decoration:none;background:var(--ink);color:var(--paper);
   overflow:hidden;isolation:isolate;transition:color .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease)}
 .btn .arr{transition:transform .4s var(--ease)}
 .btn:hover .arr{transform:translateX(6px)}
@@ -158,26 +196,13 @@ h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.5rem,3.2vw,2.2r
 .btn-ol{background:transparent;color:var(--ink)}
 .btn-ol::before{background:var(--ink)}
 .btn-ol:hover{color:var(--paper)}
-.cta-row{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
-
-/* faq */
-.faq details{border-bottom:1px solid var(--hair)}
-.faq details:first-of-type{border-top:2px solid var(--line)}
-.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:18px;
-  padding:18px 4px;font-weight:700;font-size:15.5px}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary .pl{flex:none;width:13px;height:13px;position:relative}
-.faq summary .pl::before,.faq summary .pl::after{content:"";position:absolute;background:var(--red);transition:transform .4s var(--ease)}
-.faq summary .pl::before{left:0;top:5.5px;width:13px;height:2px}
-.faq summary .pl::after{left:5.5px;top:0;width:2px;height:13px}
-.faq details[open] summary .pl::after{transform:scaleY(0)}
-.faq .a{padding:0 4px 20px;color:var(--muted);max-width:70ch;font-size:14.5px}
+.cta-row{margin-top:24px;display:flex;gap:13px;flex-wrap:wrap}
 
 /* финал */
 .final{background:var(--ink);color:var(--paper);border-bottom:none}
-.final .wrap{text-align:center;padding-top:clamp(44px,7vh,80px);padding-bottom:clamp(44px,7vh,80px)}
-.final h2{font-family:var(--disp);font-weight:900;font-size:clamp(1.9rem,4.6vw,3.2rem);text-transform:uppercase;max-width:22ch;margin:0 auto;line-height:1.02}
-.final p{margin:18px auto 0;color:#b9b9b2;max-width:52ch}
+.final .wrap{text-align:center;padding-top:clamp(40px,6vh,72px);padding-bottom:clamp(40px,6vh,72px)}
+.final h2{font-family:var(--disp);font-weight:900;font-size:clamp(1.8rem,4.4vw,3rem);text-transform:uppercase;max-width:24ch;margin:0 auto;line-height:1.04}
+.final p{margin:16px auto 0;color:#b9b9b2;max-width:54ch}
 .final .btn{border-color:var(--paper)}
 .final .btn-ol{color:var(--paper)}
 .final .cta-row{justify-content:center}
@@ -185,7 +210,7 @@ footer{background:var(--ink);color:#8b8b84;font-size:12.5px;border-top:1px solid
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:20px;padding-bottom:24px}
 footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(252,252,250,.3)}
 
-.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -198,7 +223,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 
 <div class="strip">
   <div class="wrap">
-    <div>DATA EDITION · НЕДВИЖИМОСТЬ</div>
+    <div>DATA EDITION · НЕДВИЖИМОСТЬ И ИНВЕСТИЦИИ</div>
     <div class="right">НЕТ ДОХОДНОСТИ БЕЗ РИСКА</div>
   </div>
 </div>
@@ -207,11 +232,13 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
   <div class="wrap">
     <a href="#top">Об Артёме</a>
     <a href="#skills">Компетенции</a>
-    <a href="#books">Книги</a>
-    <a href="#media">Публицистика</a>
     <a href="#career">Опыт</a>
-    <a href="#projects">Проекты</a>
+    <a href="#books">Книги</a>
+    <a href="#publicism">Публицистика</a>
     <a href="#reviews">Отзывы</a>
+    <a href="#projects">Проекты</a>
+    <a href="#media">Медиа</a>
+    <a href="#speaking">Выступления</a>
     <a href="#services">Услуги</a>
     <a href="#blog">Блог</a>
     <a href="#contact">Контакт</a>
@@ -222,27 +249,30 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
   <div class="wrap">
     <div>
       <h1 class="title">Кто такой Артём Цогоев</h1>
-      <div class="title-sub">REAL ESTATE · RISK &amp; RETURN</div>
-      <p class="intro">Больше двадцати лет я работаю на рынке недвижимости:<br>
-      брокеридж, инвестиционные сделки, управление активами, обучение.<br>
-      Сейчас — инвестиционный директор УК «Тринфико».<br>
-      <em>Недвижимость — это цифры. Я умею их считать.</em></p>
-      <div class="byline">Инвестор · автор книг · колумнист · спикер</div>
+      <div class="title-sub">REAL ESTATE · INVESTMENTS · RISK &amp; RETURN</div>
+      <ul class="claims">
+        <li>Ведущий эксперт по инвестициям в недвижимость в России</li>
+        <li>Инвестиционный консультант <b>офисного девелопера №1 Москвы</b></li>
+        <li>Член совета директоров крупнейшей платформы коллективных инвестиций в недвижимость</li>
+        <li>Общий стаж на рынке инвестиций и недвижимости — <b>более 20 лет</b></li>
+        <li>Образование: Чикагский институт коммерческих инвестиций, степень <b>CCIM</b></li>
+        <li>Спикер и колумнист главных международных деловых СМИ</li>
+        <li>Практический специалист в области финансового моделирования</li>
+      </ul>
       <div class="cta-row">
-        <a class="btn" href="#services">Услуги <span class="arr">→</span></a>
-        <a class="btn btn-ol" href="https://t.me/atsogoev" target="_blank" rel="noopener">Telegram-канал</a>
+        <a class="btn" href="#contact">Связаться с Артёмом <span class="arr">→</span></a>
+        <a class="btn btn-ol" href="https://t.me/atsogoev" target="_blank" rel="noopener">Telegram · 13 000+ читателей</a>
       </div>
     </div>
     <div class="portrait rv" aria-hidden="true">
-      <!-- сюда ставится реальный портрет с текущего сайта -->
-      <svg viewBox="0 0 340 400" xmlns="http://www.w3.org/2000/svg">
-        <rect width="340" height="400" fill="#f3f2ee"/>
-        <g fill="none" stroke="#141414" stroke-width="1.6" opacity=".75">
-          <circle cx="170" cy="150" r="52"/>
-          <path d="M84 344 C84 262 256 262 256 344"/>
+      <svg viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg">
+        <rect width="320" height="400" fill="#f3f2ee"/>
+        <g fill="none" stroke="#141414" stroke-width="1.6" opacity=".72">
+          <circle cx="160" cy="148" r="50"/>
+          <path d="M76 344 C76 264 244 264 244 344"/>
         </g>
-        <g stroke="#cf4a2c" stroke-width="2"><path d="M18 18 h44 M18 18 v44 M322 382 h-44 M322 382 v-44" fill="none"/></g>
-        <text x="170" y="380" text-anchor="middle" font-family="Golos Text, Arial" font-size="11" fill="#5c5c56">МЕСТО ДЛЯ ПОРТРЕТА С ТЕКУЩЕГО САЙТА</text>
+        <g stroke="#cf4a2c" stroke-width="2" fill="none"><path d="M16 16 h40 M16 16 v40 M304 384 h-40 M304 384 v-40"/></g>
+        <text x="160" y="378" text-anchor="middle" font-family="Golos Text, Arial" font-size="10.5" fill="#5c5c56">ПОРТРЕТ С ТЕКУЩЕГО САЙТА</text>
       </svg>
       <div class="cap">Артём Цогоев · Москва</div>
     </div>
@@ -251,218 +281,395 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 
 <div class="stats">
   <div class="wrap">
-    <div class="stat rv"><b>20<i>+</i></b><span>лет на рынке недвижимости</span></div>
-    <div class="stat rv"><b>$1 <i>млрд+</i></b><span>активы под управлением УК «Тринфико»</span></div>
-    <div class="stat rv"><b>2 <i>книги</i></b><span>об инвестициях в недвижимость</span></div>
-    <div class="stat rv"><b>Топ-20</b><span>Telegram-каналов отрасли (VC.ru)</span></div>
+    <div class="stat rv"><b>1996</b><span>год начала работы на рынке недвижимости</span></div>
+    <div class="stat rv"><b>20<i>+</i></b><span>лет в инвестициях и недвижимости</span></div>
+    <div class="stat rv"><b>CCIM</b><span>Чикагский институт коммерческих инвестиций</span></div>
+    <div class="stat rv"><b>13<i>k+</i></b><span>читателей Telegram-канала</span></div>
+    <div class="stat rv"><b>8</b><span>проектов, реализованных при участии</span></div>
   </div>
 </div>
 
 <section id="skills">
   <div class="wrap rv">
-    <span class="chartnum">01 <i>|</i> Из чего сложилась экспертиза</span>
+    <span class="chartnum">01 <i>|</i> Ключевые компетенции</span>
+    <h2 class="big">Именно об этом он размышляет, пишет и рассказывает</h2>
+    <div class="skills">
+      <div class="skill">
+        <b>Недвижи<i>мость</i></b>
+        <p>Работает на рынке недвижимости с 1996 года. Благодаря обширной практике в разных ролях — продажи, девелопмент и редевелопмент, брокеридж — практический опыт, эрудиция и знания уникальны.</p>
+      </div>
+      <div class="skill">
+        <b>Инвес<i>тиции</i></b>
+        <p>Более 20 лет участвует в реализации множества инвестиционных проектов на рынке недвижимости. Один из ведущих специалистов в России по секьюритизации недвижимости.</p>
+      </div>
+      <div class="skill">
+        <b>Буду<i>щее</i></b>
+        <p>Прогнозирование — важный элемент при осуществлении инвестиций. Профессионально изучает будущее, чтобы быть в курсе трендов и изменений, реагировать и успешно зарабатывать на них.</p>
+      </div>
+    </div>
+
     <!-- фирменный приём: дуги входят справа и выпрямляются в строки данных -->
-    <svg class="figsvg" viewBox="0 0 1040 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Структура 20 лет карьеры по направлениям">
-      <g fill="none" stroke-linecap="butt">
-        <path d="M250 55 H648 A312 312 0 0 0 960 -257" stroke="#1d5c45" stroke-width="20"/>
-        <path d="M250 110 H648 A367 367 0 0 0 1015 -257" stroke="#2c7a5c" stroke-width="20"/>
-        <path d="M250 165 H648 A422 422 0 0 0 1070 -257" stroke="#1d5c45" stroke-width="20"/>
-        <path d="M250 220 H648 A477 477 0 0 0 1125 -257" stroke="#2c7a5c" stroke-width="20"/>
-        <path d="M250 275 H648 A532 532 0 0 0 1180 -257" stroke="#1d5c45" stroke-width="20"/>
-        <path d="M250 55 H565" stroke="#cf4a2c" stroke-width="20"/>
-        <path d="M250 110 H500" stroke="#cf4a2c" stroke-width="20"/>
-        <path d="M250 165 H460" stroke="#cf4a2c" stroke-width="20"/>
-        <path d="M250 220 H420" stroke="#cf4a2c" stroke-width="20"/>
-        <path d="M250 275 H360" stroke="#cf4a2c" stroke-width="20"/>
-      </g>
-      <g font-family="Golos Text, Arial" font-size="15" fill="#141414" text-anchor="end" font-weight="600">
-        <text x="238" y="60">Брокеридж и сделки</text>
-        <text x="238" y="115">Инвестиции</text>
-        <text x="238" y="170">Управление активами</text>
-        <text x="238" y="225">Консалтинг / Best Use</text>
-        <text x="238" y="280">Обучение и медиа</text>
-      </g>
-      <g font-family="Golos Text, Arial" font-size="14" font-weight="700" fill="#cf4a2c">
-        <text x="577" y="60">≈6 лет</text>
-        <text x="512" y="115">≈5 лет</text>
-        <text x="472" y="170">≈5 лет</text>
-        <text x="432" y="225">≈4 года</text>
-        <text x="372" y="280">≈4 года</text>
-      </g>
-      <text x="250" y="330" font-family="Golos Text, Arial" font-size="11.5" fill="#5c5c56">Направления пересекаются по годам · оценка для демо, уточняется по биографии</text>
-    </svg>
+    <div style="margin-top:34px">
+      <svg class="figsvg" viewBox="0 0 1040 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Распределение двадцати лет карьеры по направлениям">
+        <g fill="none" stroke-linecap="butt">
+          <path d="M270 52 H648 A312 312 0 0 0 960 -260" stroke="#1d5c45" stroke-width="19"/>
+          <path d="M270 105 H648 A365 365 0 0 0 1013 -260" stroke="#2c7a5c" stroke-width="19"/>
+          <path d="M270 158 H648 A418 418 0 0 0 1066 -260" stroke="#1d5c45" stroke-width="19"/>
+          <path d="M270 211 H648 A471 471 0 0 0 1119 -260" stroke="#2c7a5c" stroke-width="19"/>
+          <path d="M270 264 H648 A524 524 0 0 0 1172 -260" stroke="#1d5c45" stroke-width="19"/>
+          <path d="M270 52 H600" stroke="#cf4a2c" stroke-width="19"/>
+          <path d="M270 105 H510" stroke="#cf4a2c" stroke-width="19"/>
+          <path d="M270 158 H420" stroke="#cf4a2c" stroke-width="19"/>
+          <path d="M270 211 H390" stroke="#cf4a2c" stroke-width="19"/>
+          <path d="M270 264 H360" stroke="#cf4a2c" stroke-width="19"/>
+        </g>
+        <g font-family="Golos Text, Arial" font-size="14.5" fill="#141414" text-anchor="end" font-weight="600">
+          <text x="258" y="57">Инвестиции, фонды, ЗПИФ</text>
+          <text x="258" y="110">Продажи и брокеридж</text>
+          <text x="258" y="163">Медиа, обучение, консалтинг</text>
+          <text x="258" y="216">Земельные активы</text>
+          <text x="258" y="269">Девелопмент и редевелопмент</text>
+        </g>
+        <g font-family="Golos Text, Arial" font-size="13.5" font-weight="700" fill="#cf4a2c">
+          <text x="612" y="57">≈11 лет</text>
+          <text x="522" y="110">≈7 лет</text>
+          <text x="432" y="163">≈4 года</text>
+          <text x="402" y="216">≈2 года</text>
+          <text x="372" y="269">≈2 года</text>
+        </g>
+        <text x="270" y="322" font-family="Golos Text, Arial" font-size="11.5" fill="#5c5c56">Периоды пересекаются: подсчёт по датам из раздела «Профессиональная карьера»</text>
+      </svg>
+    </div>
   </div>
 </section>
 
 <section id="career">
   <div class="wrap rv">
     <span class="chartnum">02 <i>|</i> Профессиональная карьера</span>
-    <h2 class="big">Компании и роли</h2>
+    <h2 class="big">Двадцать лет: компании, роли, результат</h2>
     <div class="career">
-      <div class="career-row"><div class="yr">сейчас</div><b>УК «Тринфико»</b><span>инвестиционный директор · крупнейшая независимая УК ЗПИФ недвижимости, $1 млрд+ под управлением</span></div>
-      <div class="career-row"><div class="yr">20XX</div><b>STONE</b><span>роль и годы — переносим с текущего сайта</span></div>
-      <div class="career-row"><div class="yr">20XX</div><b>S.A. Ricci</b><span>коммерческая недвижимость · роль и годы — переносим с текущего сайта</span></div>
-      <div class="career-row"><div class="yr">20XX</div><b>Ранние проекты</b><span>полный список компаний, образование и регалии — переносим с текущего сайта разделами «Карьера» и «Образование»</span></div>
+      <div class="career-row now">
+        <div class="co">STONE</div>
+        <div class="ro">Инвестиционный консультант<em>04.2026 — наст. время</em></div>
+        <div class="de">Взаимодействие с частными инвесторами, формирование аналитической и образовательной повестки, продвижение инвестиционных продуктов компании.</div>
+      </div>
+      <div class="career-row now">
+        <div class="co">SimpleEstate</div>
+        <div class="ro">Член совета директоров<em>06.2022 — наст. время</em></div>
+        <div class="de">Развитие бизнеса инвестиционной платформы коллективных инвестиций в недвижимость, взаимодействие с инвесторами, поиск инвестпроектов.</div>
+      </div>
+      <div class="career-row">
+        <div class="co">ТРИНФИКО</div>
+        <div class="ro">Инвестиционный директор<em>2010–2012 и 2017–2022</em></div>
+        <div class="de">Взаимодействие с инвесторами и собственниками недвижимости, поиск инвестпроектов, участие в сделках, координация продаж в проектах.</div>
+      </div>
+      <div class="career-row">
+        <div class="co">Knight Frank</div>
+        <div class="ro">Директор по продажам земли<em>2017</em></div>
+        <div class="de">Расширение бизнеса отдела Capital Markets в сфере продажи земельных участков под девелопмент в Москве и Московской области.</div>
+      </div>
+      <div class="career-row">
+        <div class="co">Капитал Платина</div>
+        <div class="ro">Директор по продажам земли<em>2016–2017</em></div>
+        <div class="de">Продажи земельного банка в Московской и Тамбовской областях общей площадью более 30 тыс. га.</div>
+      </div>
+      <div class="career-row">
+        <div class="co">UNIKVART</div>
+        <div class="ro">Управляющий партнёр<em>2012–2015</em></div>
+        <div class="de">Собственный бизнес в сфере продаж новостроек в Московской области. Реализовано 3 жилых комплекса (Красногорск, Мытищи).</div>
+      </div>
+      <div class="career-row">
+        <div class="co">GALAXY GROUP</div>
+        <div class="ro">Коммерческий директор<em>2007–2009</em></div>
+        <div class="de">Организация продаж квартир в элитном жилом комплексе «Английский Квартал» и проекте комфорт-класса «Бутово-Парк».</div>
+      </div>
+      <div class="career-row">
+        <div class="co">BLACKWOOD</div>
+        <div class="ro">Исполнительный директор УК<em>2004–2006</em></div>
+        <div class="de">Создание и развитие одной из первых в России управляющих компаний ЗПИФ.</div>
+      </div>
+      <div class="career-row">
+        <div class="co">ЦЕРИХ</div>
+        <div class="ro">Инвестиционный директор<em>2004</em></div>
+        <div class="de">Осуществление ряда спекулятивных сделок на рынке особняков. Синдикация инвестиций.</div>
+      </div>
+      <div class="career-row">
+        <div class="co">ОРГБАНК</div>
+        <div class="ro">Руководитель проекта<em>2002–2004</em></div>
+        <div class="de">Создание и воплощение концепции развития территории площадью 15 га в Донском районе Москвы.</div>
+      </div>
     </div>
-    <div class="sec-note">Логотипы компаний ставятся монохромной линейкой под списком — как на текущем сайте, но в единой стилистике.</div>
+
+    <h2 class="big" style="margin-top:34px">Образование</h2>
+    <div class="edu">
+      <div><b>Государственный университет по землеустройству</b><span>Инженер городского кадастра · высшее образование</span></div>
+      <div><b>Государственный университет по землеустройству</b><span>Юрист · второе высшее образование</span></div>
+      <div><b>Чикагский институт коммерческих инвестиций</b><span>Сертифицированный специалист по коммерческим инвестициям (CCIM)</span></div>
+      <div><b>Академия бизнеса EY</b><span>Оценка бизнеса · дополнительное образование</span></div>
+    </div>
+    <div class="sec-note">Логотипы компаний и учебных заведений переносятся с текущего сайта монохромной линейкой.</div>
   </div>
 </section>
 
 <section id="books">
   <div class="wrap rv">
     <span class="chartnum">03 <i>|</i> Книги</span>
-    <h2 class="big">Две книги об инвестициях</h2>
+    <h2 class="big">Две книги об инвестициях в недвижимость</h2>
     <div class="books">
       <div class="bk">
-        <svg viewBox="0 0 130 184" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="130" height="184" fill="#1d5c45"/>
-          <rect width="6" height="184" fill="#143f30"/>
-          <rect x="16" y="18" width="34" height="3" fill="#cf4a2c"/>
-          <text x="16" y="52" font-family="Georgia, serif" font-size="14" fill="#fcfcfa">Как</text>
-          <text x="16" y="70" font-family="Georgia, serif" font-size="14" fill="#fcfcfa">инвестировать</text>
-          <text x="16" y="88" font-family="Georgia, serif" font-size="14" fill="#f0c265">в недвижимость</text>
-          <text x="16" y="166" font-family="Golos Text, Arial" font-size="9" fill="#a8cbbb">АРТЁМ ЦОГОЕВ</text>
+        <svg viewBox="0 0 120 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="120" height="170" fill="#1d5c45"/>
+          <rect width="5" height="170" fill="#143f30"/>
+          <rect x="15" y="16" width="30" height="3" fill="#cf4a2c"/>
+          <text x="15" y="48" font-family="Georgia, serif" font-size="12.5" fill="#fcfcfa">Как</text>
+          <text x="15" y="64" font-family="Georgia, serif" font-size="12.5" fill="#fcfcfa">инвестировать</text>
+          <text x="15" y="80" font-family="Georgia, serif" font-size="12.5" fill="#f0c265">в недвижимость</text>
+          <text x="15" y="154" font-family="Golos Text, Arial" font-size="8" fill="#a8cbbb">АРТЁМ ЦОГОЕВ</text>
         </svg>
         <div>
           <b>«Как инвестировать в недвижимость»</b>
-          <p>Системный взгляд практика: от первой сделки до портфельного подхода.</p>
-          <a href="#contact">Где купить →</a>
+          <p>Издательство «Альпина Бизнес Букс». Системный взгляд практика: от первой сделки до портфельного подхода.</p>
+          <div class="st">★★★★★ Книга-бестселлер в категории «Недвижимость» 2004–2005 годов</div>
+          <a href="#contact">Скачать бесплатно →</a>
         </div>
       </div>
       <div class="bk">
-        <svg viewBox="0 0 130 184" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="130" height="184" fill="#141414"/>
-          <rect width="6" height="184" fill="#000"/>
-          <rect x="16" y="18" width="34" height="3" fill="#cf4a2c"/>
-          <text x="16" y="56" font-family="Georgia, serif" font-size="15" fill="#fcfcfa">Вторая</text>
-          <text x="16" y="75" font-family="Georgia, serif" font-size="15" fill="#fcfcfa">книга</text>
-          <g stroke="#5c5c56" fill="none"><path d="M16 110 v30 h18 v-30 z M40 140 v-42 h18 v42 z M64 140 v-20 h18 v20 z"/></g>
-          <text x="16" y="166" font-family="Golos Text, Arial" font-size="9" fill="#8b8b84">АРТЁМ ЦОГОЕВ</text>
+        <svg viewBox="0 0 120 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="120" height="170" fill="#141414"/>
+          <rect width="5" height="170" fill="#000"/>
+          <rect x="15" y="16" width="30" height="3" fill="#cf4a2c"/>
+          <text x="15" y="50" font-family="Georgia, serif" font-size="13" fill="#fcfcfa">Актуальная</text>
+          <text x="15" y="68" font-family="Georgia, serif" font-size="13" fill="#fcfcfa">версия</text>
+          <g stroke="#5c5c56" fill="none"><path d="M15 100 v28 h16 v-28 z M37 128 v-38 h16 v38 z M59 128 v-18 h16 v18 z"/></g>
+          <text x="15" y="154" font-family="Golos Text, Arial" font-size="8" fill="#8b8b84">АРТЁМ ЦОГОЕВ</text>
         </svg>
         <div>
-          <b>Вторая книга</b>
-          <p>Название, обложка и описание — переносим с текущего сайта (раздел «Книги Артёма Цогоева»).</p>
-          <a href="#contact">Где купить →</a>
+          <b>Актуальная версия классики деловой литературы в новом формате</b>
+          <p>Переработанное издание с учётом сегодняшнего рынка: инструменты, налоги, коллективные инвестиции.</p>
+          <div class="st">★★★★★ Бестселлер: «Озон», «Библио-Глобус»</div>
+          <a href="#contact">Скачать бесплатно →</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="media">
+<section id="publicism">
   <div class="wrap rv">
-    <span class="chartnum">04 <i>|</i> Медиа-пространство</span>
-    <h2 class="big">Публикации и экспертиза</h2>
-    <div class="media-grid">
-      <div class="media-cell"><b>Forbes</b><span>эксперт, комментарии</span></div>
-      <div class="media-cell"><b>Коммерсантъ</b><span>публикации</span></div>
-      <div class="media-cell"><b>Ведомости</b><span>публикации</span></div>
-      <div class="media-cell"><b>РБК</b><span>эфиры и комментарии</span></div>
-      <div class="media-cell"><b>CRE</b><span>отраслевые материалы</span></div>
-      <div class="media-cell"><b>Банки.ру</b><span>колумнист</span></div>
-      <div class="media-cell"><b>Telegram</b><span>@atsogoev · топ-20 отрасли</span></div>
-      <div class="media-cell"><b>YouTube · Дзен</b><span>видео и статьи</span></div>
-    </div>
-    <div class="sec-note">Список изданий — с текущего сайта; примеры сотрудничества со СМИ выносятся в отдельную страницу-архив.</div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="wrap rv">
-    <span class="chartnum">05 <i>|</i> Инвестиционные проекты</span>
-    <h2 class="big">Кейсы, за которые отвечал деньгами</h2>
-    <div class="projects">
-      <div class="proj">
-        <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="300" height="150" fill="#f3f2ee"/>
-          <g stroke="#141414" fill="none" stroke-width="1.4"><path d="M40 130 V60 h36 V130 M92 130 V38 h30 l6 10 V130 M144 130 V78 h44 V130 M204 130 V52 h32 V130"/></g>
-          <line x1="20" y1="130" x2="280" y2="130" stroke="#141414" stroke-width="2"/>
-          <rect x="252" y="20" width="28" height="10" fill="#cf4a2c"/>
-        </svg>
-        <div class="pb"><b>Проект 1 — жилой комплекс</b><span>Фото, роль и результат — переносим из раздела «Инвестиционные проекты»</span></div>
-      </div>
-      <div class="proj">
-        <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="300" height="150" fill="#f3f2ee"/>
-          <g stroke="#141414" fill="none" stroke-width="1.4"><path d="M30 130 V90 h60 V130 M110 130 V46 h48 V130 M178 130 V70 h56 V130"/></g>
-          <line x1="20" y1="130" x2="280" y2="130" stroke="#141414" stroke-width="2"/>
-          <rect x="252" y="20" width="28" height="10" fill="#1d5c45"/>
-        </svg>
-        <div class="pb"><b>Проект 2 — коммерция</b><span>Фото, роль и результат — переносим с текущего сайта</span></div>
-      </div>
-      <div class="proj">
-        <svg viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <rect width="300" height="150" fill="#f3f2ee"/>
-          <g stroke="#141414" fill="none" stroke-width="1.4"><path d="M46 130 V56 l30 -18 30 18 V130 M136 130 V84 h50 V130 M206 130 V64 h40 V130"/></g>
-          <line x1="20" y1="130" x2="280" y2="130" stroke="#141414" stroke-width="2"/>
-          <rect x="252" y="20" width="28" height="10" fill="#cf4a2c"/>
-        </svg>
-        <div class="pb"><b>Проект 3 — фонды / ЗПИФ</b><span>Фото, роль и результат — переносим с текущего сайта</span></div>
-      </div>
+    <span class="chartnum">04 <i>|</i> Публицистика</span>
+    <h2 class="big">Сотни статей о рынке недвижимости и инвестициях</h2>
+    <p class="lead">Контент, который собирает тысячи просмотров: инвестиционные идеи, разборы сделок, финансовые модели, аналитика рынка.</p>
+    <div class="socials">
+      <a class="soc" href="https://t.me/atsogoev" target="_blank" rel="noopener">
+        <b>Telegram</b><span>Артем Цогоев | Недвижимость</span><em>&gt; 13 000 читателей · подписаться</em>
+      </a>
+      <a class="soc" href="https://max.ru/atsogoev" target="_blank" rel="noopener">
+        <b>MAX</b><span>новая площадка</span><em>в стадии развития · подписаться</em>
+      </a>
+      <a class="soc" href="#contact">
+        <b>YouTube</b><span>видео и интервью</span><em>канал в стадии развития · подписаться</em>
+      </a>
+      <a class="soc" href="https://t.me/atsogoev_bot" target="_blank" rel="noopener">
+        <b>Реклама</b><span>рекламные возможности в соцсетях Артёма</span><em>узнать больше →</em>
+      </a>
     </div>
   </div>
 </section>
 
 <section id="reviews">
   <div class="wrap rv">
-    <span class="chartnum">06 <i>|</i> Коллеги и клиенты</span>
-    <div class="quote">
-      <div class="q">Цитата клиента или коллеги — переносим дословно из блока отзывов текущего сайта, одна сильная вместо карусели</div>
-      <div class="who">Имя, должность — с текущего сайта · остальные отзывы раскрываются по клику</div>
+    <span class="chartnum">05 <i>|</i> Коллеги и клиенты об Артёме</span>
+    <h2 class="big">Что говорят те, кто работал вместе</h2>
+    <div class="quotes">
+      <div class="qt">
+        <div class="q">Вдумчивый и чрезвычайно профессиональный подход, чувствуется многолетний опыт Артёма в сфере недвижимости и инвестиций</div>
+        <div class="who">Александр Козлов<span>Коммерческий директор Концерна «Русич»</span></div>
+      </div>
+      <div class="qt">
+        <div class="q">Артём — авторитет во всём, что касается инвестиций в недвижимость. Он предлагает умные, практичные и современные методы управления капиталом</div>
+        <div class="who">Андрей Прокофьев<span>Ветеран рынка коллективных инвестиций в недвижимость</span></div>
+      </div>
+      <div class="qt">
+        <div class="q">С Артёмом знаком давно. Он зарекомендовал себя в качестве профессионального и ответственного эксперта-практика в сфере недвижимости и инвестиций</div>
+        <div class="who">Олег Лукьянычев<span>Экс-председатель правления ПФС-Банка</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap rv">
+    <span class="chartnum">06 <i>|</i> Проекты</span>
+    <h2 class="big">Некоторые проекты, реализованные при участии Артёма</h2>
+    <div class="projects">
+      <div class="proj">
+        <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="300" height="130" fill="#f3f2ee"/><g stroke="#141414" fill="none" stroke-width="1.4"><path d="M40 112 V52 h34 V112 M90 112 V34 h28 l6 9 V112 M140 112 V66 h42 V112 M198 112 V44 h30 V112"/></g><line x1="20" y1="112" x2="280" y2="112" stroke="#141414" stroke-width="2"/><rect x="252" y="16" width="26" height="9" fill="#cf4a2c"/></svg>
+        <div class="pb"><b>ЖК «Грильяж»</b><span>Жилой комплекс комфорт-класса в Москве. Редевелопмент.</span><em>2022</em></div>
+      </div>
+      <div class="proj">
+        <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="300" height="130" fill="#f3f2ee"/><g stroke="#141414" fill="none" stroke-width="1.4"><path d="M40 112 V70 h80 V112 M136 112 V58 h60 V112 M210 112 V78 h48 V112"/><path d="M40 70 h80 M136 58 h60"/></g><line x1="20" y1="112" x2="280" y2="112" stroke="#141414" stroke-width="2"/><rect x="252" y="16" width="26" height="9" fill="#1d5c45"/></svg>
+        <div class="pb"><b>ТЦ «Павелецкий»</b><span>Районный торговый центр в Москве. Антикризисное управление.</span><em>2022</em></div>
+      </div>
+      <div class="proj">
+        <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="300" height="130" fill="#f3f2ee"/><g stroke="#141414" fill="none" stroke-width="1.4"><path d="M46 112 V46 l28 -16 28 16 V112 M120 112 V64 h50 V112 M188 112 V52 h44 V112"/></g><line x1="20" y1="112" x2="280" y2="112" stroke="#141414" stroke-width="2"/><rect x="252" y="16" width="26" height="9" fill="#cf4a2c"/></svg>
+        <div class="pb"><b>«Орехово. Дом у парка»</b><span>Комплекс гостиничных апартаментов в Москве. Редевелопмент.</span><em>2020</em></div>
+      </div>
+      <div class="proj">
+        <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="300" height="130" fill="#f3f2ee"/><g stroke="#141414" fill="none" stroke-width="1.2"><path d="M24 92 h252 M24 72 h252 M24 52 h252"/><path d="M70 40 V112 M150 40 V112 M230 40 V112"/></g><line x1="20" y1="112" x2="280" y2="112" stroke="#141414" stroke-width="2"/><rect x="252" y="16" width="26" height="9" fill="#1d5c45"/></svg>
+        <div class="pb"><b>Земли с/х назначения</b><span>Земельный массив 14 тыс. га в Тамбовской области. Управление продажами.</span><em>2017</em></div>
+      </div>
+      <div class="proj">
+        <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="300" height="130" fill="#f3f2ee"/><g stroke="#141414" fill="none" stroke-width="1.4"><path d="M36 112 V60 h30 V112 M80 112 V40 h30 V112 M124 112 V68 h34 V112 M172 112 V48 h32 V112 M218 112 V74 h36 V112"/></g><line x1="20" y1="112" x2="280" y2="112" stroke="#141414" stroke-width="2"/><rect x="252" y="16" width="26" height="9" fill="#cf4a2c"/></svg>
+        <div class="pb"><b>ЖК Red Hills</b><span>Жилой комплекс комфорт-класса в Красногорске (МО). Управление продажами.</span><em>2015</em></div>
+      </div>
+      <div class="proj">
+        <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="300" height="130" fill="#f3f2ee"/><g stroke="#141414" fill="none" stroke-width="1.4"><path d="M44 112 V56 h36 V112 M96 112 V38 h34 V112 M146 112 V64 h40 V112 M200 112 V50 h34 V112"/></g><line x1="20" y1="112" x2="280" y2="112" stroke="#141414" stroke-width="2"/><rect x="252" y="16" width="26" height="9" fill="#1d5c45"/></svg>
+        <div class="pb"><b>ЖК Bravo</b><span>Жилой комплекс комфорт-класса в Мытищах (МО). Управление продажами.</span><em>2014</em></div>
+      </div>
+      <div class="proj">
+        <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="300" height="130" fill="#f3f2ee"/><g stroke="#141414" fill="none" stroke-width="1.4"><path d="M40 112 V64 h44 V112 M100 112 V44 h30 V112 M146 112 V70 h38 V112 M198 112 V56 h40 V112"/></g><line x1="20" y1="112" x2="280" y2="112" stroke="#141414" stroke-width="2"/><rect x="252" y="16" width="26" height="9" fill="#cf4a2c"/></svg>
+        <div class="pb"><b>ЖК «Южный»</b><span>Жилой комплекс комфорт-класса в Красногорске (МО). Управление продажами.</span><em>2013</em></div>
+      </div>
+      <div class="proj">
+        <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="300" height="130" fill="#f3f2ee"/><g stroke="#141414" fill="none" stroke-width="1.4"><path d="M54 112 V38 h28 V112 M96 112 V52 h26 V112 M136 112 V30 h30 V112 M180 112 V58 h30 V112"/></g><line x1="20" y1="112" x2="280" y2="112" stroke="#141414" stroke-width="2"/><rect x="252" y="16" width="26" height="9" fill="#141414"/></svg>
+        <div class="pb"><b>ЖК «Английский Квартал»</b><span>Жилой комплекс премиум-класса в Москве. Управление продажами.</span><em>2009</em></div>
+      </div>
+    </div>
+    <div class="sec-note">Фотографии объектов переносятся с текущего сайта — здесь показаны схемы-заглушки.</div>
+  </div>
+</section>
+
+<section id="media">
+  <div class="wrap rv">
+    <span class="chartnum">07 <i>|</i> Медиа-пространство</span>
+    <div class="qt" style="max-width:820px;margin-bottom:28px">
+      <div class="q">Артём Цогоев — признанный эксперт в сфере недвижимости и инвестиций, имеющий свой собственный взгляд на многие освещаемые СМИ вопросы. Обращаясь к Артёму, всегда можно рассчитывать на максимально оперативный, исчерпывающе полный и профессиональный, но при этом интересный комментарий</div>
+      <div class="who">Людмила Ломакина / Дудиева<span>Продюсер Business FM</span></div>
+    </div>
+    <h2 class="big">Примеры сотрудничества со СМИ</h2>
+    <div class="media-grid">
+      <div class="md">
+        <div class="src">Forbes</div>
+        <b>Оборотистый «капитал»: как Павел Тё сделал Capital Group одним из лидеров рынка недвижимости России</b>
+        <p>Capital Group заняла первое место в рейтинге девелоперов элитного жилья. Как управляется одна из крупнейших и старейших компаний московского рынка?</p>
+        <a href="#contact">Читать на сайте Forbes →</a>
+      </div>
+      <div class="md">
+        <div class="src">Коммерсантъ</div>
+        <b>Минстрой подогрел спрос: как «апартаментная амнистия» повлияет на стоимость помещений</b>
+        <p>Москвичи неожиданно заинтересовались апартаментами: спрос на покупку в конце ноября вырос в 2,5 раза. Причина — в вероятной «апартаментной амнистии».</p>
+        <a href="#contact">Читать на сайте Коммерсантъ →</a>
+      </div>
+      <div class="md">
+        <div class="src">Business FM</div>
+        <b>Спальные районы ждёт бум коворкингов? Есть ли спрос на гибкие офисы вне центра городов</b>
+        <p>Эксперты предрекают бум рабочих пространств в жилых многоквартирных домах. Во многих московских апарт-комплексах уже есть коворкинги.</p>
+        <a href="#contact">Читать на сайте Business FM →</a>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-ol" href="#contact">Получить комментарий Артёма <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="speaking">
+  <div class="wrap rv">
+    <span class="chartnum">08 <i>|</i> Выступления на конференциях</span>
+    <h2 class="big">О недвижимости, инвестициях и управлении капиталом</h2>
+    <p class="lead">Артёма часто приглашают выступить на деловых мероприятиях: недвижимость, инвестиции, управление капиталом, фонды недвижимости, продажи и мотивация. Среди форматов — «Русский Завтрак» и интервью популярным YouTube-каналам.</p>
+    <div class="tags">
+      <span>Конференции</span><span>Онлайн-мероприятия</span><span>Частные семинары</span>
+      <span>Корпоративные семинары</span><span>Воркшопы</span><span>Модерация</span>
+    </div>
+    <div class="cta-row">
+      <a class="btn" href="#contact">Пригласить Артёма <span class="arr">→</span></a>
     </div>
   </div>
 </section>
 
 <section id="services">
   <div class="wrap rv">
-    <span class="chartnum">07 <i>|</i> Профессиональные услуги</span>
-    <h2 class="big">Чем могу быть полезен</h2>
+    <span class="chartnum">09 <i>|</i> Бизнес-проекты и услуги</span>
+    <h2 class="big">Консультирование инвесторов, девелоперов и инициаторов проектов</h2>
     <div class="svc">
-      <div class="svc-row"><div class="n">01</div><h3>Best Use-анализ объекта</h3><div class="d">Лучшее и наиболее эффективное использование: варианты, финмодели, вывод.</div><div class="p">от 250 000 ₽</div></div>
-      <div class="svc-row"><div class="n">02</div><h3>Best Use + градпотенциал</h3><div class="d">Полный анализ с проработкой ПЗЗ, ГПЗУ и перспектив зонирования.</div><div class="p">от 450 000 ₽</div></div>
-      <div class="svc-row"><div class="n">03</div><h3>Специфические сегменты</h3><div class="d">Склады, производство, рекреация — где ошибка концепции стоит сотни миллионов.</div><div class="p">индивидуально</div></div>
-      <div class="svc-row"><div class="n">04</div><h3>Обучение «Анализ Best Use 2.0»</h3><div class="d">Методология — профессионалам рынка. Мини-группа 10 человек, лично.</div><div class="p">от 29 999 ₽</div></div>
-      <div class="svc-row"><div class="n">05</div><h3>Финансовое моделирование</h3><div class="d">Консалтинговый сервис для девелоперов и инвесторов рынка недвижимости, владельцев и управляющих активами.</div><div class="p">по запросу</div></div>
-      <div class="svc-row"><div class="n">06</div><h3>Личная консультация</h3><div class="d">Мнение Артёма Цогоева по вашему проекту, идее или предложению — один на один.</div><div class="p">запись открыта</div></div>
-      <div class="svc-row"><div class="n">07</div><h3>Выступления и лекции</h3><div class="d">Конференции, корпоративные программы, бизнес-школы.</div><div class="p">по запросу</div></div>
+      <div class="svc-row">
+        <div class="n">01</div><h3>Образовательная платформа</h3>
+        <div class="d">С 2022 года Артём делится знаниями в формате обучающих онлайн-программ. Действующий поток — «Анализ Best Use 2.0».</div>
+        <div class="p">от 29 999 ₽</div>
+      </div>
+      <div class="svc-row">
+        <div class="n">02</div><h3>Best Use-анализ объекта</h3>
+        <div class="d">Определение лучшего и наиболее эффективного использования: варианты, финмодели, вывод.</div>
+        <div class="p">от 250 000 ₽</div>
+      </div>
+      <div class="svc-row">
+        <div class="n">03</div><h3>Best Use + градостроительный потенциал</h3>
+        <div class="d">Полный анализ с проработкой ПЗЗ, ГПЗУ и перспектив изменения зонирования участка.</div>
+        <div class="p">от 450 000 ₽</div>
+      </div>
+      <div class="svc-row">
+        <div class="n">04</div><h3>Финансовое моделирование</h3>
+        <div class="d">Консалтинговый сервис для девелоперов и инвесторов рынка недвижимости, владельцев и управляющих активами.</div>
+        <div class="p">по запросу</div>
+      </div>
+      <div class="svc-row">
+        <div class="n">05</div><h3>Личная консультация</h3>
+        <div class="d">Возможность получить мнение Артёма Цогоева по своему проекту, идее или предложению.</div>
+        <div class="p">запись открыта</div>
+      </div>
+      <div class="svc-row">
+        <div class="n">06</div><h3>Медиа-продвижение</h3>
+        <div class="d">Рекламные интеграции для застройщиков, инвесторов, продавцов недвижимости и агентств.</div>
+        <div class="p">по запросу</div>
+      </div>
+      <div class="svc-row">
+        <div class="n">07</div><h3>Подкаст «Строители Империй»</h3>
+        <div class="d">О тех, кто делал бизнес, связанный с недвижимостью и строительством: исторические очерки и расследования о людях, событиях и времени.</div>
+        <div class="p">личный проект</div>
+      </div>
     </div>
     <div class="cta-row">
-      <a class="btn" href="../index.html">Лендинг курса Best Use 2.0 <span class="arr">→</span></a>
+      <a class="btn" href="../index.html">Курс «Анализ Best Use 2.0» <span class="arr">→</span></a>
+      <a class="btn btn-ol" href="#contact">Заказать консультацию</a>
     </div>
+    <div class="sec-note">«Хороший человек не профессия, это образ жизни» — раздел личных проектов сохранён.</div>
   </div>
 </section>
 
 <section id="blog">
   <div class="wrap rv">
-    <span class="chartnum">08 <i>|</i> Последние статьи</span>
+    <span class="chartnum">10 <i>|</i> Последние статьи</span>
+    <h2 class="big">Свежее из канала @atsogoev</h2>
     <div class="posts">
-      <div class="post"><div class="tag">Аналитика</div><b>Заголовок последней статьи — подтягивается из Telegram или Дзена</b><span>дата · источник</span></div>
-      <div class="post"><div class="tag">Разбор</div><b>Заголовок статьи — блок обновляется автоматически, без ручной выкладки</b><span>дата · источник</span></div>
-      <div class="post"><div class="tag">Рынок</div><b>Заголовок статьи — архив всех публикаций на отдельной странице</b><span>дата · источник</span></div>
+      <div class="post">
+        <div class="dt">27.08.2026</div>
+        <p>Мы привыкли говорить о коммерческой недвижимости так, будто она сама участник рынка. «Объект вырос в цене», «объект плохо продаётся». Но объект ничего не совершает — решения принимают люди…</p>
+      </div>
+      <div class="post">
+        <div class="dt">26.08.2026</div>
+        <p>Помещение свободного назначения 288,8 м² в корпусе С: два этажа, витринный фасад, потолки 5–8 м, 65 кВт. Стоимость 52 853 288 ₽ — 183 010 ₽/м². Считаю покупку в беспроцентную рассрочку…</p>
+      </div>
+      <div class="post">
+        <div class="dt">26.08.2026</div>
+        <p>Смотрим на проект глазами того, кто покупает помещение, чтобы сдавать. SWOT-анализ!</p>
+      </div>
+    </div>
+    <div class="cta-row">
+      <a class="btn btn-ol" href="https://t.me/atsogoev" target="_blank" rel="noopener">Показать ещё <span class="arr">→</span></a>
     </div>
   </div>
 </section>
 
-<section>
-  <div class="wrap rv">
-    <span class="chartnum">09 <i>|</i> Иные личные проекты</span>
-    <div class="quote" style="margin-top:20px">
-      <div class="q">Хороший человек не профессия, это образ жизни</div>
-      <div class="who">Личные и общественные проекты — переносим карточками из одноимённого раздела текущего сайта («Строители СНГ» и другие)</div>
+<div class="risk">
+  <div class="wrap">
+    <div>
+      <b>Перед осуществлением инвестиций пройдите тест на риск-профилирование</b>
+      <span>Пять минут, чтобы понять, какой уровень риска вам подходит</span>
     </div>
+    <a class="btn btn-ol" href="#contact">Пройти тест <span class="arr">→</span></a>
   </div>
-</section>
-
-<section class="faq">
-  <div class="wrap rv">
-    <span class="chartnum">10 <i>|</i> Вопросы</span>
-    <div style="margin-top:20px">
-      <details><summary>С какими объектами вы работаете?<span class="pl"></span></summary><div class="a">Ответы переносим из FAQ текущего сайта в том же порядке — здесь блок показан для структуры.</div></details>
-      <details><summary>Сколько стоит консультация?<span class="pl"></span></summary><div class="a">Ответ с текущего сайта.</div></details>
-      <details><summary>Как попасть на обучение?<span class="pl"></span></summary><div class="a">Ответ с текущего сайта + ссылка на лендинг курса.</div></details>
-    </div>
-  </div>
-</section>
+</div>
 
 <section class="final" id="contact">
   <div class="wrap">
@@ -477,7 +684,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 
 <footer>
   <div class="wrap">
-    <div>© Артём Цогоев · atsogoev.ru · демо-макет: тексты-заглушки переносятся с текущего сайта</div>
+    <div>© Артём Цогоев · официальный сайт · демо-макет нового дизайна</div>
     <div><a href="https://t.me/atsogoev" target="_blank" rel="noopener">@atsogoev</a></div>
   </div>
 </footer>
@@ -486,7 +693,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 document.documentElement.classList.add('js');
 var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-},{threshold:.1}) : null;
+},{threshold:.08}) : null;
 document.querySelectorAll('.rv').forEach(function(el){
   if(io){ io.observe(el); } else { el.classList.add('in'); }
 });
