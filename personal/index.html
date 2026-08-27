@@ -95,10 +95,21 @@ h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.45rem,3vw,2.1re
 
 /* карьера */
 .career{border-top:2px solid var(--ink)}
-.career-row{display:grid;grid-template-columns:150px 190px 1fr;gap:clamp(10px,2vw,28px);
-  align-items:baseline;padding:15px 4px;border-bottom:1px solid var(--hair);transition:background .3s var(--ease)}
+.career-row{display:grid;grid-template-columns:132px 178px 1fr;gap:clamp(10px,2vw,26px);
+  align-items:center;padding:14px 4px;border-bottom:1px solid var(--hair);transition:background .3s var(--ease)}
 .career-row:hover{background:var(--paper-2)}
 .career-row .co{font-weight:700;font-size:15px}
+.logo-box{width:120px;height:44px;display:grid;place-items:center;border:1px solid var(--hair);background:var(--paper);
+  transition:border-color .3s var(--ease),transform .3s var(--ease)}
+.career-row:hover .logo-box{border-color:var(--ink);transform:translateY(-2px)}
+.logo-box svg{display:block;width:104px;height:34px}
+.avatar{width:60px;height:60px;border-radius:50%;flex:none;display:grid;place-items:center;
+  font-family:var(--disp);font-weight:900;font-size:19px;color:var(--paper);background:var(--green);
+  border:2px solid var(--ink)}
+.avatar.b{background:var(--red)}
+.avatar.c{background:var(--ink)}
+.qt-head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.qt-head small{display:block;font-size:10px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
 .career-row .ro{font-size:14px}
 .career-row .ro em{display:block;font-style:normal;font-family:var(--disp);font-weight:900;font-size:13px;color:var(--red);margin-top:2px}
 .career-row .de{color:var(--muted);font-size:13.5px}
@@ -149,11 +160,19 @@ h2.big{font-family:var(--disp);font-weight:900;font-size:clamp(1.45rem,3vw,2.1re
 
 /* сми */
 .media-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:clamp(16px,2.4vw,28px)}
-.md{border-top:3px solid var(--ink);padding-top:13px}
-.md .src{font-family:var(--disp);font-weight:900;font-size:17px}
-.md b{display:block;margin-top:7px;font-size:15px;line-height:1.35}
+.md{border:1px solid var(--hair);display:flex;flex-direction:column;
+  transition:transform .4s var(--ease),box-shadow .4s var(--ease),border-color .4s var(--ease)}
+.md:hover{transform:translateY(-5px);box-shadow:0 22px 44px -26px rgba(20,20,20,.4);border-color:var(--ink)}
+.md .cover{display:block;width:100%;height:auto;border-bottom:1px solid var(--hair)}
+.md .in{padding:15px 17px 18px;display:flex;flex-direction:column;flex:1}
+.md .src{font-family:var(--disp);font-weight:900;font-size:16px}
+.md b{display:block;margin-top:6px;font-size:14.5px;line-height:1.35}
 .md p{margin-top:7px;font-size:13px;color:var(--muted)}
-.md a{display:inline-block;margin-top:9px;font-size:12.5px;font-weight:700;color:var(--red);text-decoration:none;border-bottom:1.5px solid var(--red)}
+.md .go{display:inline-flex;align-items:center;gap:7px;margin-top:auto;padding-top:12px;font-size:12.5px;font-weight:700;
+  color:var(--ink);text-decoration:none;transition:color .3s var(--ease)}
+.md .go span{transition:transform .35s var(--ease)}
+.md:hover .go{color:var(--red)}
+.md:hover .go span{transform:translateX(5px)}
 
 /* форматы выступлений */
 .tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px}
@@ -248,13 +267,13 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 <div class="masthead" id="top">
   <div class="wrap">
     <div>
-      <h1 class="title">Кто такой Артём Цогоев</h1>
+      <h1 class="title">Кто такой Артём Цогоев?</h1>
       <div class="title-sub">REAL ESTATE · INVESTMENTS · RISK &amp; RETURN</div>
       <ul class="claims">
         <li>Ведущий эксперт по инвестициям в недвижимость в России</li>
         <li>Инвестиционный консультант <b>офисного девелопера №1 Москвы</b></li>
-        <li>Член совета директоров крупнейшей платформы коллективных инвестиций в недвижимость</li>
-        <li>Общий стаж на рынке инвестиций и недвижимости — <b>более 20 лет</b></li>
+        <li>Член совета директоров крупнейшей инвестиционной платформы коллективных инвестиций в недвижимость в России</li>
+        <li>Общий стаж работы на рынке инвестиций и недвижимости — <b>более 20 лет</b></li>
         <li>Образование: Чикагский институт коммерческих инвестиций, степень <b>CCIM</b></li>
         <li>Спикер и колумнист главных международных деловых СМИ</li>
         <li>Практический специалист в области финансового моделирования</li>
@@ -271,7 +290,6 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
           <circle cx="160" cy="148" r="50"/>
           <path d="M76 344 C76 264 244 264 244 344"/>
         </g>
-        <g stroke="#cf4a2c" stroke-width="2" fill="none"><path d="M16 16 h40 M16 16 v40 M304 384 h-40 M304 384 v-40"/></g>
         <text x="160" y="378" text-anchor="middle" font-family="Golos Text, Arial" font-size="10.5" fill="#5c5c56">ПОРТРЕТ С ТЕКУЩЕГО САЙТА</text>
       </svg>
       <div class="cap">Артём Цогоев · Москва</div>
@@ -285,7 +303,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
     <div class="stat rv"><b>20<i>+</i></b><span>лет в инвестициях и недвижимости</span></div>
     <div class="stat rv"><b>CCIM</b><span>Чикагский институт коммерческих инвестиций</span></div>
     <div class="stat rv"><b>14<i>k+</i></b><span>читателей Telegram-канала</span></div>
-    <div class="stat rv"><b>8</b><span>проектов, реализованных при участии</span></div>
+    <div class="stat rv"><b>8</b><span>проектов в публичном портфолио</span></div>
   </div>
 </div>
 
@@ -310,7 +328,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 
     <!-- фирменный приём: дуги входят справа и выпрямляются в строки данных -->
     <div style="margin-top:34px">
-      <svg class="figsvg" viewBox="0 0 1040 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Распределение двадцати лет карьеры по направлениям">
+      <svg class="figsvg" viewBox="0 0 1040 350" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Распределение карьеры по направлениям">
         <g fill="none" stroke-linecap="butt">
           <path d="M270 52 H648 A312 312 0 0 0 960 -260" stroke="#1d5c45" stroke-width="19"/>
           <path d="M270 105 H648 A365 365 0 0 0 1013 -260" stroke="#2c7a5c" stroke-width="19"/>
@@ -337,8 +355,9 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
           <text x="332" y="216">2 года</text>
           <text x="332" y="269">2 года</text>
         </g>
-        <text x="270" y="316" font-family="Golos Text, Arial" font-size="11.5" fill="#5c5c56">Сумма лет по датам из раздела «Профессиональная карьера»: ЦЕРИХ, BLACKWOOD, ТРИНФИКО, SimpleEstate —</text>
-        <text x="270" y="332" font-family="Golos Text, Arial" font-size="11.5" fill="#5c5c56">инвестиции; GALAXY GROUP и UNIKVART — продажи. Периоды пересекаются; работа на рынке с 1996 года.</text>
+        <text x="270" y="310" font-family="Golos Text, Arial" font-size="11.5" fill="#5c5c56">Инвестиции: ЦЕРИХ, BLACKWOOD, ТРИНФИКО, SimpleEstate. Продажи: GALAXY GROUP, UNIKVART. Земля: Банк Платина,</text>
+        <text x="270" y="326" font-family="Golos Text, Arial" font-size="11.5" fill="#5c5c56">Knight Frank. Девелопмент: ОРГБАНК. Медиа и обучение: образовательная платформа с 2022 года и STONE с 04.2026.</text>
+        <text x="270" y="342" font-family="Golos Text, Arial" font-size="11.5" fill="#5c5c56">Периоды пересекаются, поэтому сумма больше календарного стажа. На рынке недвижимости — с 1996 года.</text>
       </svg>
     </div>
   </div>
@@ -347,55 +366,55 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 <section id="career">
   <div class="wrap rv">
     <span class="chartnum">02 <i>|</i> Профессиональная карьера</span>
-    <h2 class="big">Двадцать лет: компании, роли, результат</h2>
+    <h2 class="big">Компании, роли, результат — с 2002 года</h2>
     <div class="career">
       <div class="career-row now">
-        <div class="co">STONE</div>
+        <div class="logo-box"><svg viewBox="0 0 208 68" aria-label="STONE"><rect x="2" y="14" width="12" height="40" fill="#141414"/><rect x="18" y="24" width="12" height="30" fill="#cf4a2c"/><text x="40" y="47" font-family="Golos Text, Arial" font-size="26" font-weight="700" letter-spacing="4" fill="#141414">STONE</text></svg></div>
         <div class="ro">Инвестиционный консультант<em>04.2026 — наст. время</em></div>
         <div class="de">Взаимодействие с частными инвесторами, формирование аналитической и образовательной повестки, продвижение инвестиционных продуктов компании.</div>
       </div>
       <div class="career-row now">
-        <div class="co">SimpleEstate</div>
+        <div class="logo-box"><svg viewBox="0 0 208 68" aria-label="SimpleEstate"><path d="M4 46 L18 26 L32 46 Z" fill="#1d5c45"/><text x="40" y="38" font-family="Golos Text, Arial" font-size="20" font-weight="700" fill="#141414">Simple</text><text x="40" y="58" font-family="Golos Text, Arial" font-size="20" font-weight="400" fill="#1d5c45">Estate</text></svg></div>
         <div class="ro">Член совета директоров<em>06.2022 — наст. время</em></div>
         <div class="de">Развитие бизнеса инвестиционной платформы коллективных инвестиций в недвижимость, взаимодействие с инвесторами, поиск инвестпроектов.</div>
       </div>
       <div class="career-row">
-        <div class="co">ТРИНФИКО</div>
+        <div class="logo-box"><svg viewBox="0 0 208 68" aria-label="ТРИНФИКО"><g fill="#1a4f8a"><path d="M16 18 L30 26 L30 42 L16 50 L2 42 L2 26 Z" opacity=".25"/><path d="M16 24 L26 30 L26 40 L16 46 L6 40 L6 30 Z"/></g><text x="38" y="44" font-family="Golos Text, Arial" font-size="20" font-weight="700" letter-spacing="1.5" fill="#1a4f8a">ТРИНФИКО</text></svg></div>
         <div class="ro">Инвестиционный директор<em>2010–2012 и 2017–2022</em></div>
         <div class="de">Взаимодействие с инвесторами и собственниками недвижимости, поиск инвестпроектов, участие в сделках, координация продаж в проектах.</div>
       </div>
       <div class="career-row">
-        <div class="co">Knight Frank</div>
+        <div class="logo-box"><svg viewBox="0 0 208 68" aria-label="Knight Frank"><text x="4" y="34" font-family="Georgia, serif" font-size="21" font-weight="700" fill="#141414">Knight</text><text x="4" y="58" font-family="Georgia, serif" font-size="21" font-weight="700" fill="#141414">Frank</text><g fill="#cf4a2c"><path d="M120 26 h16 v16 h-16 z"/><path d="M140 34 h16 v16 h-16 z"/></g></svg></div>
         <div class="ro">Директор по продажам земли<em>2017</em></div>
         <div class="de">Расширение бизнеса отдела Capital Markets в сфере продажи земельных участков под девелопмент в Москве и Московской области.</div>
       </div>
       <div class="career-row">
-        <div class="co">Капитал Платина</div>
+        <div class="logo-box"><svg viewBox="0 0 208 68" aria-label="Банк Платина"><path d="M20 16 L36 50 H4 Z" fill="none" stroke="#4a6b8a" stroke-width="2.4"/><path d="M20 28 L28 46 H12 Z" fill="#4a6b8a"/><text x="46" y="34" font-family="Golos Text, Arial" font-size="15" font-weight="700" fill="#141414">БАНК</text><text x="46" y="54" font-family="Golos Text, Arial" font-size="15" font-weight="400" letter-spacing="2" fill="#4a6b8a">ПЛАТИНА</text></svg></div>
         <div class="ro">Директор по продажам земли<em>2016–2017</em></div>
         <div class="de">Продажи земельного банка в Московской и Тамбовской областях общей площадью более 30 тыс. га.</div>
       </div>
       <div class="career-row">
-        <div class="co">UNIKVART</div>
+        <div class="logo-box"><svg viewBox="0 0 208 68" aria-label="UNIKVART"><rect x="2" y="16" width="36" height="36" fill="#1a7fd4"/><g fill="#fff"><rect x="8" y="34" width="6" height="14"/><rect x="17" y="26" width="6" height="22"/><rect x="26" y="30" width="6" height="18"/></g><text x="46" y="42" font-family="Golos Text, Arial" font-size="19" font-weight="700" letter-spacing="1" fill="#141414">UNIKVART</text></svg></div>
         <div class="ro">Управляющий партнёр<em>2012–2015</em></div>
         <div class="de">Собственный бизнес в сфере продаж новостроек в Московской области. Реализовано 3 жилых комплекса (Красногорск, Мытищи).</div>
       </div>
       <div class="career-row">
-        <div class="co">GALAXY GROUP</div>
+        <div class="logo-box"><svg viewBox="0 0 208 68" aria-label="GALAXY GROUP"><g fill="none" stroke="#c0392b" stroke-width="3.4"><circle cx="20" cy="34" r="15"/><circle cx="20" cy="34" r="7"/></g><circle cx="20" cy="34" r="2.6" fill="#c0392b"/><text x="46" y="36" font-family="Golos Text, Arial" font-size="18" font-weight="700" letter-spacing="1" fill="#141414">GALAXY</text><text x="46" y="54" font-family="Golos Text, Arial" font-size="11" font-weight="400" letter-spacing="5" fill="#5c5c56">GROUP</text></svg></div>
         <div class="ro">Коммерческий директор<em>2007–2009</em></div>
         <div class="de">Организация продаж квартир в элитном жилом комплексе «Английский Квартал» и проекте комфорт-класса «Бутово-Парк».</div>
       </div>
       <div class="career-row">
-        <div class="co">BLACKWOOD</div>
+        <div class="logo-box"><svg viewBox="0 0 208 68" aria-label="BLACKWOOD"><g fill="#141414"><rect x="8" y="22" width="9" height="34"/><rect x="19" y="14" width="7" height="42"/><rect x="28" y="28" width="9" height="28"/></g><text x="48" y="34" font-family="Golos Text, Arial" font-size="8.5" letter-spacing="1.5" fill="#5c5c56">real estate</text><text x="48" y="54" font-family="Golos Text, Arial" font-size="19" font-weight="700" letter-spacing=".5" fill="#141414">BLACKWOOD</text></svg></div>
         <div class="ro">Исполнительный директор УК<em>2004–2006</em></div>
         <div class="de">Создание и развитие одной из первых в России управляющих компаний ЗПИФ.</div>
       </div>
       <div class="career-row">
-        <div class="co">ЦЕРИХ</div>
+        <div class="logo-box"><svg viewBox="0 0 208 68" aria-label="ЦЕРИХ"><rect x="4" y="14" width="38" height="38" fill="#8e2b52"/><text x="23" y="45" text-anchor="middle" font-family="Golos Text, Arial" font-size="27" font-weight="700" fill="#fff">Z</text><text x="52" y="42" font-family="Golos Text, Arial" font-size="19" font-weight="700" letter-spacing="3" fill="#141414">ЦЕРИХ</text></svg></div>
         <div class="ro">Инвестиционный директор<em>2004</em></div>
         <div class="de">Осуществление ряда спекулятивных сделок на рынке особняков. Синдикация инвестиций.</div>
       </div>
       <div class="career-row">
-        <div class="co">ОРГБАНК</div>
+        <div class="logo-box"><svg viewBox="0 0 208 68" aria-label="ОРГБАНК"><g fill="#c8921f"><circle cx="18" cy="34" r="14"/><circle cx="18" cy="34" r="7" fill="#fcfcfa"/><rect x="18" y="27" width="16" height="14"/></g><text x="42" y="42" font-family="Golos Text, Arial" font-size="19" font-weight="700" letter-spacing="1" fill="#c8921f">ОРГБАНК</text></svg></div>
         <div class="ro">Руководитель проекта<em>2002–2004</em></div>
         <div class="de">Создание и воплощение концепции развития территории площадью 15 га в Донском районе Москвы.</div>
       </div>
@@ -405,7 +424,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
     <div class="edu">
       <div><b>Государственный университет по землеустройству</b><span>Инженер городского кадастра · высшее образование</span></div>
       <div><b>Государственный университет по землеустройству</b><span>Юрист · второе высшее образование</span></div>
-      <div><b>Чикагский институт коммерческих инвестиций</b><span>Сертифицированный специалист по коммерческим инвестициям (CCIM)</span></div>
+      <div><b>Чикагский институт коммерческих инвестиций</b><span>Сертифицированный специалист по коммерческим инвестициям (CCIM) · дополнительное образование</span></div>
       <div><b>Академия бизнеса EY</b><span>Оценка бизнеса · дополнительное образование</span></div>
     </div>
     <div class="sec-note">Логотипы компаний и учебных заведений переносятся с текущего сайта монохромной линейкой.</div>
@@ -429,8 +448,8 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
         </svg>
         <div>
           <b>«Как инвестировать в недвижимость»</b>
-          <p>Издательство «Альпина Бизнес Букс». Системный взгляд практика: от первой сделки до портфельного подхода.</p>
-          <div class="st">★★★★★ Книга-бестселлер в категории «Недвижимость» 2004–2005 годов</div>
+          <p>Системный взгляд практика: от первой сделки до портфельного подхода.</p>
+          <div class="st">★★★★★ Книга-бестселлер в категории «Недвижимость» 2004–2005 годов · «Альпина Бизнес Букс», «Озон», «Библио-глобус»</div>
           <a href="#contact">Скачать бесплатно →</a>
         </div>
       </div>
@@ -447,7 +466,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
         <div>
           <b>Актуальная версия классики деловой литературы в новом формате</b>
           <p>Переработанное издание с учётом сегодняшнего рынка: инструменты, налоги, коллективные инвестиции.</p>
-          <div class="st">★★★★★ Бестселлер: «Озон», «Библио-Глобус»</div>
+          <div class="st">★★★★★ Актуальная версия классики деловой литературы</div>
           <a href="#contact">Скачать бесплатно →</a>
         </div>
       </div>
@@ -465,13 +484,13 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
         <b>Telegram</b><span>Артем Цогоев | Недвижимость</span><em>&gt; 14 000 читателей · подписаться</em>
       </a>
       <a class="soc" href="https://max.ru/atsogoev" target="_blank" rel="noopener">
-        <b>MAX</b><span>новая площадка</span><em>в стадии развития · подписаться</em>
+        <b>MAX</b><span>в стадии развития</span><em>подписаться →</em>
       </a>
-      <a class="soc" href="#contact">
-        <b>YouTube</b><span>видео и интервью</span><em>канал в стадии развития · подписаться</em>
+      <a class="soc" href="https://www.youtube.com/c/atsogoev" target="_blank" rel="noopener">
+        <b>YouTube</b><span>канал в стадии развития</span><em>подписаться →</em>
       </a>
-      <a class="soc" href="https://t.me/atsogoev_bot" target="_blank" rel="noopener">
-        <b>Реклама</b><span>рекламные возможности в соцсетях Артёма</span><em>узнать больше →</em>
+      <a class="soc" href="https://atsogoev.ru/ad" target="_blank" rel="noopener">
+        <b>Реклама</b><span>рекламные возможности в социальных сетях Артёма Цогоева</span><em>узнать больше →</em>
       </a>
     </div>
   </div>
@@ -483,16 +502,25 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
     <h2 class="big">Что говорят те, кто работал вместе</h2>
     <div class="quotes">
       <div class="qt">
+        <div class="qt-head">
+          <div class="avatar" aria-hidden="true">АК</div>
+          <div class="who">Александр Козлов<span>Коммерческий директор Концерна «Русич»</span><small>фото с текущего сайта</small></div>
+        </div>
         <div class="q">Вдумчивый и чрезвычайно профессиональный подход, чувствуется многолетний опыт Артёма в сфере недвижимости и инвестиций</div>
-        <div class="who">Александр Козлов<span>Коммерческий директор Концерна «Русич»</span></div>
       </div>
       <div class="qt">
+        <div class="qt-head">
+          <div class="avatar b" aria-hidden="true">АП</div>
+          <div class="who">Андрей Прокофьев<span>Ветеран рынка коллективных инвестиций в недвижимость</span><small>фото с текущего сайта</small></div>
+        </div>
         <div class="q">Артём — авторитет во всём, что касается инвестиций в недвижимость. Он предлагает умные, практичные и современные методы управления капиталом</div>
-        <div class="who">Андрей Прокофьев<span>Ветеран рынка коллективных инвестиций в недвижимость</span></div>
       </div>
       <div class="qt">
+        <div class="qt-head">
+          <div class="avatar c" aria-hidden="true">ОЛ</div>
+          <div class="who">Олег Лукьянычев<span>Экс-председатель правления ПФС-Банка</span><small>фото с текущего сайта</small></div>
+        </div>
         <div class="q">С Артёмом знаком давно. Он зарекомендовал себя в качестве профессионального и ответственного эксперта-практика в сфере недвижимости и инвестиций</div>
-        <div class="who">Олег Лукьянычев<span>Экс-председатель правления ПФС-Банка</span></div>
       </div>
     </div>
   </div>
@@ -501,7 +529,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
 <section id="projects">
   <div class="wrap rv">
     <span class="chartnum">06 <i>|</i> Проекты</span>
-    <h2 class="big">Некоторые проекты, реализованные при участии Артёма</h2>
+    <h2 class="big">Некоторые проекты, реализованные при участии Артёма Цогоева</h2>
     <div class="projects">
       <div class="proj">
         <svg viewBox="0 0 300 130" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="300" height="130" fill="#f3f2ee"/><g stroke="#141414" fill="none" stroke-width="1.4"><path d="M40 112 V52 h34 V112 M90 112 V34 h28 l6 9 V112 M140 112 V66 h42 V112 M198 112 V44 h30 V112"/></g><line x1="20" y1="112" x2="280" y2="112" stroke="#141414" stroke-width="2"/><rect x="252" y="16" width="26" height="9" fill="#cf4a2c"/></svg>
@@ -550,27 +578,65 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
     <h2 class="big">Примеры сотрудничества со СМИ</h2>
     <div class="media-grid">
       <div class="md">
-        <div class="src">Forbes</div>
-        <b>Оборотистый «капитал»: как Павел Тё сделал Capital Group одним из лидеров рынка недвижимости России</b>
-        <p>Capital Group заняла первое место в рейтинге девелоперов элитного жилья. Как управляется одна из крупнейших и старейших компаний московского рынка?</p>
-        <a href="#contact">Читать на сайте Forbes →</a>
+        <svg class="cover" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="180" fill="#141414"/>
+          <g stroke="#fcfcfa" fill="none" stroke-width="1.5" opacity=".55">
+            <path d="M40 160 V70 h34 V160 M84 160 V44 h26 l7 11 V160 M126 160 V96 h40 V160 M176 160 V60 h30 V160 M216 160 V110 h46 V160 M272 160 V78 h34 V160 M316 160 V126 h44 V160"/>
+          </g>
+          <g fill="#cf4a2c"><rect x="176" y="60" width="30" height="7"/><rect x="84" y="44" width="26" height="7"/></g>
+          <line x1="20" y1="160" x2="380" y2="160" stroke="#fcfcfa" stroke-width="2"/>
+          <text x="24" y="34" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#fcfcfa">Forbes</text>
+        </svg>
+        <div class="in">
+          <div class="src">Forbes</div>
+          <b>Оборотистый «капитал»: как Павел Тё сделал Capital Group одним из лидеров рынка недвижимости России</b>
+          <p>Capital Group заняла первое место в рейтинге девелоперов элитного жилья. Как управляется одна из крупнейших и старейших компаний на московском рынке недвижимости?</p>
+          <a class="go" href="https://www.forbes.ru/reytingi/412193-oborotistyy-kapital-kak-pavel-tyo-sdelal-capital-group-odnim-iz-liderov-rynka" target="_blank" rel="noopener">Читать на Forbes.ru <span>→</span></a>
+        </div>
       </div>
       <div class="md">
-        <div class="src">Коммерсантъ</div>
-        <b>Минстрой подогрел спрос: как «апартаментная амнистия» повлияет на стоимость помещений</b>
-        <p>Москвичи неожиданно заинтересовались апартаментами: спрос на покупку в конце ноября вырос в 2,5 раза. Причина — в вероятной «апартаментной амнистии».</p>
-        <a href="#contact">Читать на сайте Коммерсантъ →</a>
+        <svg class="cover" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="180" fill="#1d5c45"/>
+          <g fill="none" stroke="#fcfcfa" stroke-width="1.5" opacity=".5">
+            <rect x="46" y="52" width="120" height="108"/><rect x="186" y="80" width="76" height="80"/><rect x="282" y="64" width="72" height="96"/>
+            <path d="M46 86 h120 M46 120 h120 M186 112 h76 M282 98 h72 M282 130 h72"/>
+            <path d="M106 52 V160 M224 80 V160 M318 64 V160"/>
+          </g>
+          <g fill="#e0b45c"><rect x="66" y="96" width="16" height="16"/><rect x="196" y="122" width="14" height="14"/></g>
+          <line x1="20" y1="160" x2="380" y2="160" stroke="#fcfcfa" stroke-width="2"/>
+          <text x="24" y="34" font-family="Georgia, serif" font-size="18" font-weight="700" fill="#fcfcfa">Коммерсантъ</text>
+        </svg>
+        <div class="in">
+          <div class="src">Коммерсантъ</div>
+          <b>Минстрой подогрел спрос: как грядущая «апартаментная амнистия» повлияет на стоимость помещений</b>
+          <p>Москвичи неожиданно заинтересовались апартаментами: спрос на покупку в конце ноября вырос в 2,5 раза. Причина — в вероятной «апартаментной амнистии».</p>
+          <a class="go" href="https://www.kommersant.ru/" target="_blank" rel="noopener">Читать на Коммерсантъ <span>→</span></a>
+        </div>
       </div>
       <div class="md">
-        <div class="src">Business FM</div>
-        <b>Спальные районы ждёт бум коворкингов? Есть ли спрос на гибкие офисы вне центра городов</b>
-        <p>Эксперты предрекают бум рабочих пространств в жилых многоквартирных домах. Во многих московских апарт-комплексах уже есть коворкинги.</p>
-        <a href="#contact">Читать на сайте Business FM →</a>
+        <svg class="cover" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="180" fill="#cf4a2c"/>
+          <g fill="none" stroke="#fcfcfa" stroke-width="2" opacity=".65">
+            <circle cx="200" cy="94" r="30"/><path d="M200 64 V44 M170 94 h-26 M230 94 h26 M179 73 l-18 -18 M221 73 l18 -18"/>
+            <path d="M150 140 q50 -24 100 0" />
+          </g>
+          <g fill="#fcfcfa" opacity=".85"><rect x="60" y="118" width="10" height="26"/><rect x="76" y="104" width="10" height="40"/><rect x="92" y="126" width="10" height="18"/><rect x="308" y="110" width="10" height="34"/><rect x="324" y="122" width="10" height="22"/></g>
+          <line x1="20" y1="160" x2="380" y2="160" stroke="#fcfcfa" stroke-width="2"/>
+          <text x="24" y="34" font-family="Golos Text, Arial" font-size="17" font-weight="700" fill="#fcfcfa">Business FM</text>
+        </svg>
+        <div class="in">
+          <div class="src">Business FM</div>
+          <b>Спальные районы ждёт бум коворкингов? Есть ли спрос на гибкие офисные пространства вне центра городов?</b>
+          <p>Эксперты предрекают бум рабочих пространств в жилых многоквартирных домах. Во многих московских апарт-комплексах уже есть коворкинги.</p>
+          <a class="go" href="https://www.bfm.ru/" target="_blank" rel="noopener">Слушать на Business FM <span>→</span></a>
+        </div>
       </div>
     </div>
     <div class="cta-row">
-      <a class="btn btn-ol" href="#contact">Получить комментарий Артёма <span class="arr">→</span></a>
+      <a class="btn" href="https://t.me/artemtsogoev" target="_blank" rel="noopener">Получить комментарий Артёма <span class="arr">→</span></a>
+      <a class="btn btn-ol" href="#blog">Все публикации</a>
     </div>
+    <div class="sec-note">Ссылка на Forbes — рабочая. Точные адреса материалов «Коммерсанта» и Business FM переносятся с текущего сайта при запуске.</div>
   </div>
 </section>
 
@@ -578,13 +644,14 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
   <div class="wrap rv">
     <span class="chartnum">08 <i>|</i> Выступления на конференциях</span>
     <h2 class="big">О недвижимости, инвестициях и управлении капиталом</h2>
-    <p class="lead">Артёма часто приглашают выступить на деловых мероприятиях: недвижимость, инвестиции, управление капиталом, фонды недвижимости, продажи и мотивация. Среди форматов — «Русский Завтрак» и интервью популярным YouTube-каналам.</p>
+    <p class="lead">Артёма часто приглашают выступить на деловых мероприятиях, чтобы он рассказал о недвижимости, инвестициях, управлении капиталом, фондах недвижимости, продажах и мотивации. Среди недавнего — выступление на «Русском Завтраке» и интервью популярному YouTube-каналу.</p>
     <div class="tags">
       <span>Конференции</span><span>Онлайн-мероприятия</span><span>Частные семинары</span>
       <span>Корпоративные семинары</span><span>Воркшопы</span><span>Модерация</span>
     </div>
     <div class="cta-row">
-      <a class="btn" href="#contact">Пригласить Артёма <span class="arr">→</span></a>
+      <a class="btn" href="https://t.me/artemtsogoev" target="_blank" rel="noopener">Пригласить Артёма выступить <span class="arr">→</span></a>
+      <a class="btn btn-ol" href="https://t.me/atsogoev" target="_blank" rel="noopener">Посмотреть выступления</a>
     </div>
   </div>
 </section>
@@ -631,8 +698,8 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
       </div>
     </div>
     <div class="cta-row">
-      <a class="btn" href="../index.html">Курс «Анализ Best Use 2.0» <span class="arr">→</span></a>
-      <a class="btn btn-ol" href="#contact">Заказать консультацию</a>
+      <a class="btn" href="../index.html">Образовательная платформа: курс Best Use 2.0 <span class="arr">→</span></a>
+      <a class="btn btn-ol" href="https://t.me/artemtsogoev" target="_blank" rel="noopener">Заказать консультацию</a>
     </div>
     <div class="sec-note">«Хороший человек не профессия, это образ жизни» — раздел личных проектов сохранён.</div>
   </div>
@@ -668,7 +735,7 @@ footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(25
       <b>Перед осуществлением инвестиций пройдите тест на риск-профилирование</b>
       <span>Пять минут, чтобы понять, какой уровень риска вам подходит</span>
     </div>
-    <a class="btn btn-ol" href="#contact">Пройти тест <span class="arr">→</span></a>
+    <a class="btn btn-ol" href="https://t.me/artemtsogoev" target="_blank" rel="noopener">Пройти тест <span class="arr">→</span></a>
   </div>
 </div>
 
