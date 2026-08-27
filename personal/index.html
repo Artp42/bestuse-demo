@@ -3,171 +3,146 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Артём Цогоев — инвестиции в недвижимость</title>
-<meta name="description" content="Эксперт по инвестициям в недвижимость. Best Use-анализ, инвестиционный консалтинг, обучение. Инвестиционный директор УК «Тринфико».">
+<title>Артём Цогоев — риск и доходность недвижимости</title>
+<meta name="description" content="Данные, риск и доходность рынка недвижимости. Best Use-анализ, инвестиционный консалтинг, обучение. Артём Цогоев — дата-издание.">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Артём Цогоев — инвестиции в недвижимость">
-<meta property="og:description" content="Best Use-анализ, инвестиционный консалтинг, обучение. 20+ лет на рынке недвижимости. Демо-макет нового сайта.">
+<meta property="og:title" content="Артём Цогоев · Риск и доходность недвижимости">
+<meta property="og:description" content="Дата-издание о недвижимости: где деньги, две логики инвестора, волатильность и доходность. Демо-макет нового сайта.">
 <meta property="og:url" content="https://artp42.github.io/bestuse-demo/personal/">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2312352a'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%23c99b3f'%3E%D0%90%D0%A6%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23141414'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%23fcfcfa'%3E%D0%90%D0%A6%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prata&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,900&family=Golos+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#101d17;
-  --pine:#12352a;
-  --pine-2:#0e2b22;
-  --pine-3:#1a4534;
-  --paper:#fbfbf9;
-  --paper-2:#f1f2ed;
-  --brass:#b98a2e;
-  --brass-2:#e0b45c;
-  --line:rgba(16,29,23,.13);
-  --line-inv:rgba(251,251,249,.16);
-  --muted:#43554c;
-  --muted-inv:#a8bab0;
-  --serif:'Prata', Georgia, 'Times New Roman', serif;
+  --ink:#141414;
+  --paper:#fcfcfa;
+  --paper-2:#f3f2ee;
+  --red:#cf4a2c;          /* данные, серия A */
+  --green:#1d5c45;        /* данные, серия B */
+  --green-2:#2c7a5c;
+  --line:#141414;
+  --hair:rgba(20,20,20,.16);
+  --muted:#5c5c56;
+  --disp:'Piazzolla', Georgia, 'Times New Roman', serif;
   --sans:'Golos Text', 'Segoe UI', Arial, sans-serif;
   --ease:cubic-bezier(.16,1,.3,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.16;text-wrap:balance}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:1160px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,4vw,44px)}
+
+/* верхняя газетная строка */
+.masthead-strip{border-bottom:2px solid var(--line)}
+.masthead-strip .wrap{display:flex;justify-content:space-between;gap:16px;align-items:center;height:46px;
+  font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.masthead-strip .right{color:var(--muted);font-weight:500}
+@media(max-width:640px){.masthead-strip .right{display:none}}
+
+/* титул */
+.masthead{position:relative;overflow:hidden;border-bottom:2px solid var(--line)}
+.masthead .wrap{padding-top:clamp(34px,6vh,70px);padding-bottom:0;position:relative}
+h1.title{
+  font-family:var(--disp);font-weight:900;line-height:.96;letter-spacing:-.015em;
+  font-size:clamp(3rem,11vw,6rem);text-transform:uppercase;
+}
+.title-sub{margin-top:22px;font-size:12px;font-weight:700;letter-spacing:.2em}
+.intro{margin-top:14px;max-width:44ch;color:var(--ink);font-size:15.5px;line-height:1.55}
+.intro em{font-style:normal;color:var(--red);font-weight:600}
+.byline{margin-top:18px;font-size:12.5px;color:var(--muted)}
+.arcnote{position:absolute;right:clamp(18px,4vw,44px);top:clamp(40px,7vh,84px);max-width:200px;text-align:right;font-size:12px;color:var(--muted)}
+@media(max-width:820px){.arcnote{display:none}}
+
+/* дуги + чарт 01 единым блоком */
+.arcs-chart{margin-top:clamp(20px,4vh,44px)}
+.arcs-chart svg{display:block;width:100%;height:auto}
+.chartnum{
+  display:inline-flex;align-items:center;gap:10px;background:var(--ink);color:var(--paper);
+  font-size:12.5px;font-weight:700;letter-spacing:.08em;padding:7px 14px;text-transform:uppercase;
+}
+.chartnum i{font-style:normal;color:var(--paper);opacity:.6}
+
+/* сетка секций 02-05 */
+.grid{border-bottom:2px solid var(--line)}
+.grid .wrap{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.cell{padding:clamp(24px,3.4vw,40px) clamp(18px,2.6vw,36px);border-top:1px solid var(--hair)}
+.cell:nth-child(odd){border-right:1px solid var(--hair);padding-left:0}
+.cell:nth-child(even){padding-right:0}
+.cell .chartnum{margin-bottom:20px}
+@media(max-width:860px){.grid .wrap{grid-template-columns:1fr}.cell:nth-child(odd){border-right:none;padding-right:0}.cell:nth-child(even){padding-left:0}}
+
+/* 02 сравнение */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--hair)}
+.vs .head{padding:12px 14px;font-weight:700;font-size:14px;display:flex;align-items:center;gap:9px;border-bottom:1px solid var(--hair)}
+.vs .head .sw{width:12px;height:12px;flex:none}
+.vs .h-a{border-right:1px solid var(--hair)}
+.vs .item{padding:11px 14px;font-size:13.8px;border-bottom:1px solid var(--hair)}
+.vs .a{border-right:1px solid var(--hair)}
+.vs .item:nth-last-child(-n+2){border-bottom:none}
+.sw-red{background:var(--red)}.sw-green{background:var(--green)}
+.vs .item::before{content:"—";margin-right:8px;color:var(--muted)}
+
+/* svg-подписи */
+.figsvg{display:block;width:100%;height:auto}
+.fignote{margin-top:12px;font-size:11.5px;color:var(--muted)}
+
+/* 04 круги */
+.circles{display:flex;align-items:flex-end;gap:clamp(10px,2vw,26px);flex-wrap:wrap}
+.circ{text-align:center}
+.circ .c{border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:700;margin:0 auto}
+.circ span{display:block;margin-top:10px;font-size:12.5px;color:var(--muted)}
+.c1{width:64px;height:64px;background:var(--green);font-size:13px}
+.c2{width:84px;height:84px;background:var(--green-2);font-size:15px}
+.c3{width:110px;height:110px;background:var(--red);font-size:18px}
+.c4{width:150px;height:150px;background:var(--ink);font-size:24px}
+
+/* площадь-график */
+.area-sec{border-bottom:2px solid var(--line)}
+.area-sec .wrap{padding-top:clamp(28px,4vh,48px);padding-bottom:clamp(28px,4vh,48px)}
+.area-sec h2{font-family:var(--disp);font-weight:900;font-size:clamp(1.4rem,3vw,2rem);margin-bottom:18px}
+
+/* услуги в том же стиле */
+.services .wrap{padding-top:clamp(40px,6vh,72px);padding-bottom:clamp(40px,6vh,72px)}
+.services h2{font-family:var(--disp);font-weight:900;font-size:clamp(1.8rem,4vw,2.8rem);text-transform:uppercase;letter-spacing:-.01em}
+.svc{margin-top:26px;border-top:2px solid var(--line)}
+.svc-row{display:grid;grid-template-columns:64px minmax(0,4fr) minmax(0,6fr) auto;gap:clamp(12px,2.4vw,36px);align-items:baseline;
+  padding:20px 4px;border-bottom:1px solid var(--hair);transition:background .3s var(--ease)}
+.svc-row:hover{background:var(--paper-2)}
+.svc-row .n{font-family:var(--disp);font-weight:900;font-size:20px;color:var(--red)}
+.svc-row h3{font-size:17px;font-weight:700;font-family:var(--sans)}
+.svc-row .d{color:var(--muted);font-size:14px}
+.svc-row .p{font-weight:700;white-space:nowrap}
+@media(max-width:760px){.svc-row{grid-template-columns:44px 1fr}.svc-row .d{grid-column:2}.svc-row .p{grid-column:2}}
 
 /* кнопки */
-.btn{
-  position:relative;display:inline-flex;align-items:center;gap:12px;
-  font-weight:600;font-size:16px;padding:17px 32px;border-radius:2px;border:none;cursor:pointer;
-  text-decoration:none;overflow:hidden;isolation:isolate;
-  transition:transform .45s var(--ease),box-shadow .45s var(--ease),background-color .45s var(--ease);
-}
-.btn .arr{transition:transform .45s var(--ease)}
+.btn{position:relative;display:inline-flex;align-items:center;gap:12px;font-weight:700;font-size:15px;
+  padding:16px 30px;border:2px solid var(--ink);cursor:pointer;text-decoration:none;background:var(--ink);color:var(--paper);
+  overflow:hidden;isolation:isolate;transition:color .35s var(--ease),transform .35s var(--ease),box-shadow .35s var(--ease)}
+.btn .arr{transition:transform .4s var(--ease)}
 .btn:hover .arr{transform:translateX(6px)}
-.btn::after{content:"";position:absolute;top:0;left:-80%;width:55%;height:100%;z-index:-1;
-  background:linear-gradient(105deg,transparent,rgba(255,255,255,.35),transparent);
-  transform:skewX(-20deg);transition:left .7s var(--ease)}
-.btn:hover::after{left:130%}
-.btn-pine{background:var(--pine);color:var(--paper)}
-.btn-pine:hover{background:var(--pine-3);transform:translateY(-2px);box-shadow:0 14px 34px -14px rgba(18,53,42,.55)}
-.btn-brass{background:var(--brass);color:#fff}
-.btn-brass:hover{background:var(--brass-2);color:var(--ink);transform:translateY(-2px);box-shadow:0 14px 34px -12px rgba(185,138,46,.5)}
-.btn-line{background:transparent;color:var(--pine);border:1px solid rgba(18,53,42,.35)}
-.btn-line::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--pine);transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--ease)}
-.btn-line:hover{color:var(--paper);border-color:var(--pine)}
-.btn-line:hover::before{transform:scaleY(1)}
-.btn-ghost{background:transparent;color:var(--paper);border:1px solid var(--line-inv)}
-.btn-ghost::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--paper);transform:scaleY(0);transform-origin:bottom;transition:transform .45s var(--ease)}
-.btn-ghost:hover{color:var(--ink);border-color:var(--paper)}
-.btn-ghost:hover::before{transform:scaleY(1)}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease)}
+.btn:hover::before{transform:scaleX(1)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(20,20,20,.4)}
+.btn-ol{background:transparent;color:var(--ink)}
+.btn-ol::before{background:var(--ink)}
+.btn-ol:hover{color:var(--paper)}
+.cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap}
 
-/* шапка */
-header{position:sticky;top:0;z-index:50;background:rgba(251,251,249,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.nav{display:flex;align-items:center;justify-content:space-between;height:74px}
-.logo{display:flex;align-items:center;gap:14px;text-decoration:none}
-.logo .mono{font-family:var(--serif);font-size:20px;width:44px;height:44px;display:grid;place-items:center;background:var(--pine);color:var(--brass-2);border-radius:2px}
-.logo .name{font-size:14.5px;font-weight:600;line-height:1.3}
-.logo .name small{display:block;font-weight:400;color:var(--muted);font-size:12px}
-.nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{text-decoration:none;font-size:15px;color:var(--muted);position:relative;padding:4px 0;transition:color .3s var(--ease)}
-.nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:1.5px;width:100%;background:var(--brass);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
-.nav-links a:hover{color:var(--ink)}
-.nav-links a:hover::after{transform:scaleX(1);transform-origin:left}
-.nav .btn{padding:12px 22px;font-size:14px}
-@media(max-width:960px){.nav-links{display:none}}
+/* контакт-финал */
+.final{background:var(--ink);color:var(--paper)}
+.final .wrap{padding-top:clamp(44px,7vh,80px);padding-bottom:clamp(44px,7vh,80px);text-align:center}
+.final h2{font-family:var(--disp);font-weight:900;font-size:clamp(2rem,5vw,3.4rem);text-transform:uppercase;max-width:22ch;margin:0 auto;line-height:1.02}
+.final p{margin:18px auto 0;color:#b9b9b2;max-width:52ch}
+.final .btn{border-color:var(--paper)}
+.final .btn-ol{color:var(--paper)}
+.final .btn-ol::before{background:var(--red)}
+footer{background:var(--ink);color:#8b8b84;font-size:12.5px;border-top:1px solid rgba(252,252,250,.18)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:22px;padding-bottom:26px}
+footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid rgba(252,252,250,.3)}
 
-/* герой */
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:end;
-  padding-top:clamp(64px,10vh,130px);padding-bottom:clamp(48px,7vh,90px)}
-.hero h1{font-size:clamp(2.2rem,4.8vw,4.3rem);letter-spacing:-.01em}
-.hero h1 em{font-style:normal;color:var(--brass)}
-.hero .lede{margin-top:26px;font-size:clamp(17px,1.6vw,20px);color:var(--muted);max-width:54ch;text-wrap:pretty}
-.hero .cta-row{margin-top:38px;display:flex;gap:16px;flex-wrap:wrap}
-.skyline{position:relative}
-.skyline svg{display:block;width:100%;height:auto}
-@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}.skyline{max-width:480px}}
-
-/* цифры */
-.stats{border-bottom:1px solid var(--line);background:var(--paper)}
-.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
-.stat{padding:clamp(26px,3.4vw,44px) clamp(14px,2vw,28px);border-right:1px solid var(--line)}
-.stat:first-child{padding-left:0}
-.stat:last-child{border-right:none}
-.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.5rem,2.8vw,2.3rem);color:var(--pine)}
-.stat span{font-size:14px;color:var(--muted)}
-@media(max-width:760px){.stats .wrap{grid-template-columns:1fr 1fr}.stat{border-right:none;border-bottom:1px solid var(--line);padding-left:0}}
-
-section{padding:clamp(64px,9vh,120px) 0}
-.sec-head{max-width:760px;margin-bottom:clamp(36px,5vh,60px)}
-.sec-head h2{font-size:clamp(1.7rem,3.2vw,2.6rem)}
-.sec-head p{margin-top:18px;color:var(--muted);font-size:18px;text-wrap:pretty}
-
-/* услуги */
-.services{background:var(--paper)}
-.svc{border-top:1px solid var(--line)}
-.svc-row{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr) auto;gap:clamp(16px,3vw,48px);align-items:center;
-  padding:clamp(24px,3.4vw,40px) 8px;border-bottom:1px solid var(--line);transition:background .3s var(--ease),padding-left .3s var(--ease)}
-.svc-row:hover{background:var(--paper-2);padding-left:18px}
-.svc-row h3{font-size:clamp(1.15rem,1.9vw,1.5rem)}
-.svc-row .desc{color:var(--muted);font-size:15.5px}
-.svc-row .price{font-family:var(--serif);white-space:nowrap;color:var(--pine);font-size:18px}
-.svc-row .price small{display:block;font-family:var(--sans);font-size:12.5px;color:var(--muted);text-align:right}
-@media(max-width:760px){.svc-row{grid-template-columns:1fr}.svc-row .price small{text-align:left}}
-
-/* best use связка */
-.bu{background:var(--pine);color:var(--paper);position:relative;overflow:hidden}
-.bu .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:center}
-.bu h2{font-size:clamp(1.8rem,3.4vw,2.8rem)}
-.bu h2 em{font-style:normal;color:var(--brass-2)}
-.bu p{margin-top:20px;color:var(--muted-inv);max-width:52ch;text-wrap:pretty}
-.bu .cta-row{margin-top:34px;display:flex;gap:16px;flex-wrap:wrap}
-.bu-plan svg{display:block;width:100%;height:auto}
-@media(max-width:860px){.bu .wrap{grid-template-columns:1fr}.bu-plan{max-width:420px}}
-
-/* книга */
-.book .wrap{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,5vw,80px);align-items:center}
-.book-cover{max-width:300px}
-.book-cover svg{display:block;width:100%;height:auto;filter:drop-shadow(0 24px 40px rgba(16,29,23,.25))}
-.book h2{font-size:clamp(1.7rem,3vw,2.5rem)}
-.book p{margin-top:18px;color:var(--muted);max-width:58ch;text-wrap:pretty}
-.book .btn{margin-top:30px}
-@media(max-width:820px){.book .wrap{grid-template-columns:1fr}.book-cover{max-width:220px}}
-
-/* сми */
-.press{background:var(--paper-2)}
-.press-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
-.press-item{background:var(--paper);padding:28px 24px;transition:background .35s var(--ease)}
-.press-item:hover{background:var(--paper-2)}
-.press-item b{display:block;font-family:var(--serif);font-weight:400;font-size:19px;color:var(--pine);margin-bottom:6px}
-.press-item span{font-size:14px;color:var(--muted)}
-
-/* канал */
-.tg{background:var(--pine-2);color:var(--paper);text-align:center}
-.tg h2{font-size:clamp(1.8rem,3.4vw,2.7rem);max-width:24ch;margin:0 auto}
-.tg p{margin:20px auto 0;color:var(--muted-inv);max-width:56ch}
-.tg .btn{margin-top:34px}
-
-/* контакт */
-.contact .wrap{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(32px,5vw,72px);align-items:start}
-.contact h2{font-size:clamp(1.7rem,3.2vw,2.6rem)}
-.contact p{margin-top:18px;color:var(--muted);max-width:50ch}
-.c-list{display:grid;gap:0;border-top:1px solid var(--line)}
-.c-list a{display:flex;justify-content:space-between;gap:16px;text-decoration:none;padding:20px 6px;border-bottom:1px solid var(--line);transition:background .3s var(--ease),padding-left .3s var(--ease)}
-.c-list a:hover{background:var(--paper-2);padding-left:16px}
-.c-list b{font-weight:600}
-.c-list span{color:var(--muted)}
-@media(max-width:820px){.contact .wrap{grid-template-columns:1fr}}
-
-footer{background:var(--pine);color:var(--muted-inv);font-size:13.5px}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:28px;padding-bottom:28px}
-footer a{color:var(--paper);text-decoration:none;border-bottom:1px solid var(--line-inv)}
-footer a:hover{border-color:var(--brass-2)}
-
-.js .rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.js .rv{opacity:0;transform:translateY(24px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .js .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
@@ -178,205 +153,235 @@ footer a:hover{border-color:var(--brass-2)}
 </head>
 <body>
 
-<header>
-  <div class="wrap nav">
-    <a class="logo" href="#top">
-      <span class="mono">АЦ</span>
-      <span class="name">Артём Цогоев<small>инвестиции в недвижимость</small></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#services">Услуги</a></li>
-      <li><a href="#bestuse">Best Use</a></li>
-      <li><a href="#book">Книга</a></li>
-      <li><a href="#press">СМИ</a></li>
-      <li><a href="#contact">Контакт</a></li>
-    </ul>
-    <a class="btn btn-pine" href="#contact">Обсудить задачу <span class="arr">→</span></a>
-  </div>
-</header>
-
-<div class="hero" id="top">
+<div class="masthead-strip">
   <div class="wrap">
-    <div>
-      <h1>Недвижимость — это цифры. <em>Я умею их считать.</em></h1>
-      <p class="lede">Инвестиционный консалтинг и Best Use-анализ для собственников, девелоперов и частных инвесторов. Экспертиза институционального уровня — для решений любого масштаба.</p>
-      <div class="cta-row">
-        <a class="btn btn-pine" href="#services">Услуги и стоимость <span class="arr">→</span></a>
-        <a class="btn btn-line" href="https://t.me/atsogoev" target="_blank" rel="noopener">Telegram-канал</a>
-      </div>
-    </div>
-    <div class="skyline" aria-hidden="true">
-      <!-- линия города: штриховой скайлайн -->
-      <svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg">
-        <g stroke="var(--pine)" fill="none" stroke-width="1.5" opacity=".9">
-          <path d="M10 340 V210 h40 V340"/>
-          <path d="M60 340 V150 h34 V340"/>
-          <path d="M104 340 V250 h50 V340"/>
-          <path d="M164 340 V90 h30 l8 18 V340"/>
-          <path d="M212 340 V180 h44 V340"/>
-          <path d="M266 340 V60 h26 V340"/>
-          <path d="M302 340 V200 h56 V340"/>
-          <path d="M368 340 V130 h36 V340"/>
-          <path d="M414 340 V240 h48 V340"/>
+    <div>DATA EDITION · НЕДВИЖИМОСТЬ</div>
+    <div class="right">НЕТ ДОХОДНОСТИ БЕЗ РИСКА · АРТЁМ ЦОГОЕВ</div>
+  </div>
+</div>
+
+<div class="masthead" id="top">
+  <div class="wrap">
+    <h1 class="title">Риск и<br>доходность</h1>
+    <div class="title-sub">RISK &amp; RETURN</div>
+    <p class="intro">Доходность не бывает бесплатной: у каждого процента своя цена.<br>
+    За каждым классом недвижимости — волатильность, которую придётся нести.<br>
+    Я двадцать лет считаю эту цену для собственников и инвесторов.<br>
+    <em>Поймите риск до того, как забирать доходность.</em></p>
+    <div class="byline">Артём Цогоев · инвестиционный директор УК «Тринфико» · автор книги «Как инвестировать в недвижимость»</div>
+    <div class="arcnote">Восемь дуг входят справа; выпрямляясь, они становятся строками данных.</div>
+
+    <div class="arcs-chart rv">
+      <span class="chartnum">01 <i>|</i> Где деньги частных инвесторов</span>
+      <!-- дуги, перетекающие в бар-чарт: зелёная дорожка + красное значение -->
+      <svg class="figsvg" viewBox="0 0 1040 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Структура вложений в недвижимость">
+        <!-- каждая строка: полная зелёная линия с дугой вправо-вверх, красный сегмент = значение -->
+        <!-- y: 60..335, шаг 55; толщина 20 -->
+        <g fill="none" stroke-linecap="butt">
+          <path d="M240 60 H648 A312 312 0 0 0 960 -252" stroke="#1d5c45" stroke-width="20"/>
+          <path d="M240 115 H648 A367 367 0 0 0 1015 -252" stroke="#2c7a5c" stroke-width="20"/>
+          <path d="M240 170 H648 A422 422 0 0 0 1070 -252" stroke="#1d5c45" stroke-width="20"/>
+          <path d="M240 225 H648 A477 477 0 0 0 1125 -252" stroke="#2c7a5c" stroke-width="20"/>
+          <path d="M240 280 H648 A532 532 0 0 0 1180 -252" stroke="#1d5c45" stroke-width="20"/>
+          <path d="M240 335 H648 A587 587 0 0 0 1235 -252" stroke="#2c7a5c" stroke-width="20"/>
+          <!-- красные значения (≈ доли, иллюстративно) -->
+          <path d="M240 60 H560" stroke="#cf4a2c" stroke-width="20"/>
+          <path d="M240 115 H460" stroke="#cf4a2c" stroke-width="20"/>
+          <path d="M240 170 H390" stroke="#cf4a2c" stroke-width="20"/>
+          <path d="M240 225 H340" stroke="#cf4a2c" stroke-width="20"/>
+          <path d="M240 280 H320" stroke="#cf4a2c" stroke-width="20"/>
+          <path d="M240 335 H280" stroke="#cf4a2c" stroke-width="20"/>
         </g>
-        <g stroke="var(--brass)" stroke-width="1" opacity=".8">
-          <path d="M266 60 h26" fill="none"/>
-          <path d="M164 90 h30" fill="none"/>
+        <g font-family="Golos Text, Arial, sans-serif" font-size="15" fill="#141414">
+          <text x="228" y="65" text-anchor="end" font-weight="600">Жилая под аренду</text>
+          <text x="228" y="120" text-anchor="end" font-weight="600">Новостройки</text>
+          <text x="228" y="175" text-anchor="end" font-weight="600">Коммерция / ГАБ</text>
+          <text x="228" y="230" text-anchor="end" font-weight="600">Земля</text>
+          <text x="228" y="285" text-anchor="end" font-weight="600">ЗПИФ недвижимости</text>
+          <text x="228" y="340" text-anchor="end" font-weight="600">Зарубежная / REITs</text>
         </g>
-        <g fill="var(--pine)" opacity=".25">
-          <rect x="66" y="165" width="6" height="6"/><rect x="78" y="165" width="6" height="6"/>
-          <rect x="66" y="180" width="6" height="6"/><rect x="78" y="180" width="6" height="6"/>
-          <rect x="270" y="80" width="5" height="5"/><rect x="280" y="80" width="5" height="5"/>
-          <rect x="270" y="94" width="5" height="5"/><rect x="280" y="94" width="5" height="5"/>
-          <rect x="372" y="145" width="6" height="6"/><rect x="384" y="145" width="6" height="6"/>
+        <g font-family="Golos Text, Arial, sans-serif" font-size="14" font-weight="700" fill="#cf4a2c">
+          <text x="572" y="65">≈32%</text>
+          <text x="472" y="120">≈22%</text>
+          <text x="402" y="175">≈15%</text>
+          <text x="352" y="230">≈10%</text>
+          <text x="332" y="285">≈8%</text>
+          <text x="292" y="340">≈4%</text>
         </g>
-        <line x1="0" y1="340" x2="480" y2="340" stroke="var(--pine)" stroke-width="2"/>
-        <text x="10" y="30" font-family="Golos Text, Arial, sans-serif" font-size="12" fill="var(--muted)">MOSCOW · SPB · REGIONS</text>
+        <text x="240" y="392" font-family="Golos Text, Arial, sans-serif" font-size="11.5" fill="#5c5c56">Оценка структуры вложений частных инвесторов · демо-данные, заменяются на вашу аналитику</text>
       </svg>
     </div>
   </div>
 </div>
 
-<div class="stats">
+<div class="grid">
   <div class="wrap">
-    <div class="stat rv"><b>$1 млрд+</b><span>активы под управлением УК «Тринфико», где я — инвестиционный директор</span></div>
-    <div class="stat rv"><b>20+ лет</b><span>на рынке недвижимости: брокеридж, оценка, инвестиции</span></div>
-    <div class="stat rv"><b>Топ-20</b><span>Telegram-каналов о недвижимости России (по версии VC.ru)</span></div>
-    <div class="stat rv"><b>от 250 000 ₽</b><span>рыночная стоимость Best Use-анализа одного объекта</span></div>
+
+    <div class="cell rv">
+      <span class="chartnum">02 <i>|</i> ГАБ и девелопмент: две логики</span>
+      <div class="vs">
+        <div class="head h-a"><span class="sw sw-red"></span>ГАБ — рента</div>
+        <div class="head"><span class="sw sw-green"></span>Девелопмент — рост</div>
+        <div class="item a">Фиксированная аренда</div><div class="item">Прибыль не гарантирована</div>
+        <div class="item a">Доход с первого месяца</div><div class="item">Доход в конце цикла</div>
+        <div class="item a">Ставка по договору</div><div class="item">Цена определяется рынком</div>
+        <div class="item a">Понятный горизонт</div><div class="item">Работает на длинной дистанции</div>
+      </div>
+    </div>
+
+    <div class="cell rv">
+      <span class="chartnum">03 <i>|</i> Волатильность и доходность</span>
+      <svg class="figsvg" viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Диаграмма рассеяния: риск и доходность классов активов">
+        <g stroke="#141414" stroke-width="1.6">
+          <line x1="52" y1="20" x2="52" y2="252"/>
+          <line x1="52" y1="252" x2="430" y2="252"/>
+          <path d="M52 20 l-5 10 h10 z" fill="#141414"/>
+          <path d="M430 252 l-10 -5 v10 z" fill="#141414"/>
+        </g>
+        <text x="20" y="18" font-family="Golos Text, Arial" font-size="11.5" fill="#5c5c56">Доходность ↑</text>
+        <text x="352" y="278" font-family="Golos Text, Arial" font-size="11.5" fill="#5c5c56">Волатильность →</text>
+        <g font-family="Golos Text, Arial" font-size="12.5" font-weight="600" fill="#141414">
+          <circle cx="88" cy="228" r="6" fill="#1d5c45"/><text x="100" y="233">Депозит</text>
+          <circle cx="136" cy="196" r="6" fill="#1d5c45"/><text x="148" y="201">ОФЗ</text>
+          <circle cx="186" cy="170" r="7" fill="#2c7a5c"/><text x="198" y="175">Жилая аренда</text>
+          <circle cx="248" cy="130" r="8" fill="#2c7a5c"/><text x="260" y="135">ГАБ</text>
+          <circle cx="306" cy="96" r="8" fill="#cf4a2c"/><text x="318" y="101">Стрит-ритейл</text>
+          <circle cx="368" cy="56" r="10" fill="#141414"/><text x="330" y="40">Девелопмент</text>
+        </g>
+      </svg>
+      <div class="fignote">Положение точек — экспертная оценка, не инвестиционная рекомендация.</div>
+    </div>
+
+    <div class="cell rv">
+      <span class="chartnum">04 <i>|</i> Масштаб долгосрочной доходности</span>
+      <div class="circles">
+        <div class="circ"><div class="c c1">≈7%</div><span>Депозит</span></div>
+        <div class="circ"><div class="c c2">≈9%</div><span>ОФЗ</span></div>
+        <div class="circ"><div class="c c3">≈12%</div><span>ГАБ</span></div>
+        <div class="circ"><div class="c c4">≈22%</div><span>Девелопмент</span></div>
+      </div>
+      <div class="fignote">Оценка годовой доходности на длинном горизонте · демо-данные.</div>
+    </div>
+
+    <div class="cell rv">
+      <span class="chartnum">05 <i>|</i> Чего боятся инвесторы</span>
+      <svg class="figsvg" viewBox="0 0 460 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Сгруппованные столбцы: страхи опытных и начинающих инвесторов">
+        <line x1="30" y1="252" x2="440" y2="252" stroke="#141414" stroke-width="1.6"/>
+        <!-- пары: опытные (зелёный) / новички (красный), высоты условные -->
+        <g>
+          <rect x="52"  y="182" width="26" height="70"  fill="#1d5c45"/>
+          <rect x="82"  y="122" width="26" height="130" fill="#cf4a2c"/>
+          <rect x="152" y="162" width="26" height="90"  fill="#1d5c45"/>
+          <rect x="182" y="92"  width="26" height="160" fill="#cf4a2c"/>
+          <rect x="252" y="192" width="26" height="60"  fill="#1d5c45"/>
+          <rect x="282" y="142" width="26" height="110" fill="#cf4a2c"/>
+          <rect x="352" y="202" width="26" height="50"  fill="#1d5c45"/>
+          <rect x="382" y="112" width="26" height="140" fill="#cf4a2c"/>
+        </g>
+        <g font-family="Golos Text, Arial" font-size="12" fill="#141414" text-anchor="middle">
+          <text x="95" y="274">Ставка ЦБ</text>
+          <text x="195" y="274">Цены на жильё</text>
+          <text x="295" y="274">Простой</text>
+          <text x="395" y="274">Ликвидность</text>
+        </g>
+        <g font-family="Golos Text, Arial" font-size="12">
+          <rect x="52" y="14" width="12" height="12" fill="#1d5c45"/><text x="70" y="25">С анализом</text>
+          <rect x="160" y="14" width="12" height="12" fill="#cf4a2c"/><text x="178" y="25">Без анализа</text>
+        </g>
+      </svg>
+      <div class="fignote">Доля называющих фактор главным риском · демо-данные.</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="area-sec">
+  <div class="wrap rv">
+    <h2>Рынок ЗПИФ недвижимости: десятилетие роста</h2>
+    <svg class="figsvg" viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Площадной график роста рынка ЗПИФ недвижимости">
+      <defs>
+        <linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#1d5c45" stop-opacity=".28"/>
+          <stop offset="1" stop-color="#1d5c45" stop-opacity=".04"/>
+        </linearGradient>
+      </defs>
+      <line x1="40" y1="252" x2="970" y2="252" stroke="#141414" stroke-width="1.6"/>
+      <path d="M60 236 L163 228 L266 214 L369 206 L472 188 L575 172 L678 142 L781 108 L884 70 L950 48 V252 H60 Z" fill="url(#ag)"/>
+      <path d="M60 236 L163 228 L266 214 L369 206 L472 188 L575 172 L678 142 L781 108 L884 70 L950 48" fill="none" stroke="#1d5c45" stroke-width="2.6"/>
+      <g fill="#cf4a2c">
+        <circle cx="60" cy="236" r="4"/><circle cx="163" cy="228" r="4"/><circle cx="266" cy="214" r="4"/>
+        <circle cx="369" cy="206" r="4"/><circle cx="472" cy="188" r="4"/><circle cx="575" cy="172" r="4"/>
+        <circle cx="678" cy="142" r="4"/><circle cx="781" cy="108" r="4"/><circle cx="884" cy="70" r="4"/><circle cx="950" cy="48" r="5"/>
+      </g>
+      <g font-family="Golos Text, Arial" font-size="12" fill="#5c5c56" text-anchor="middle">
+        <text x="60" y="274">2017</text><text x="266" y="274">2019</text><text x="472" y="274">2021</text>
+        <text x="678" y="274">2023</text><text x="884" y="274">2025</text>
+      </g>
+      <g font-family="Golos Text, Arial" font-size="12.5" font-weight="700" fill="#141414" text-anchor="middle">
+        <text x="60" y="222">≈0,2</text><text x="472" y="174">≈0,6</text><text x="884" y="56">≈1,4</text>
+        <text x="952" y="34">≈1,6 трлн ₽</text>
+      </g>
+    </svg>
+    <div class="fignote">Оценка объёма рынка ЗПИФ недвижимости, трлн ₽ · демо-данные, заменяются на актуальную аналитику.</div>
   </div>
 </div>
 
 <section class="services" id="services">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <h2>Услуги</h2>
-      <p>Работаю с собственниками, девелоперами и инвесторами. Каждый проект — лично, без делегирования младшим аналитикам.</p>
-    </div>
-    <div class="svc rv">
+  <div class="wrap rv">
+    <h2>Услуги</h2>
+    <div class="svc">
       <div class="svc-row">
+        <div class="n">01</div>
         <h3>Best Use-анализ объекта</h3>
-        <div class="desc">Определение лучшего и наиболее эффективного использования: варианты, финансовые модели, вывод. Без анализа градостроительного потенциала.</div>
-        <div class="price">от 250 000 ₽<small>3–4 недели</small></div>
+        <div class="d">Лучшее и наиболее эффективное использование: варианты, финмодели, вывод.</div>
+        <div class="p">от 250 000 ₽</div>
       </div>
       <div class="svc-row">
+        <div class="n">02</div>
         <h3>Best Use + градпотенциал</h3>
-        <div class="desc">Полный анализ с проработкой градостроительных ограничений и возможностей участка: ПЗЗ, ГПЗУ, перспективы изменения зонирования.</div>
-        <div class="price">от 450 000 ₽<small>4–6 недель</small></div>
+        <div class="d">Полный анализ с проработкой ПЗЗ, ГПЗУ и перспектив зонирования участка.</div>
+        <div class="p">от 450 000 ₽</div>
       </div>
       <div class="svc-row">
+        <div class="n">03</div>
         <h3>Специфические сегменты</h3>
-        <div class="desc">Склады, производственные площадки, рекреация — сегменты, где ошибка концепции стоит сотни миллионов.</div>
-        <div class="price">индивидуально<small>по запросу</small></div>
+        <div class="d">Склады, производство, рекреация — где ошибка концепции стоит сотни миллионов.</div>
+        <div class="p">индивидуально</div>
       </div>
       <div class="svc-row">
+        <div class="n">04</div>
         <h3>Обучение «Анализ Best Use 2.0»</h3>
-        <div class="desc">Передаю методологию профессионалам рынка: мини-группа 10 человек, еженедельные сессии лично со мной.</div>
-        <div class="price">от 29 999 ₽<small>ближайший поток — 31 августа</small></div>
+        <div class="d">Методология — профессионалам рынка. Мини-группа 10 человек, лично со мной.</div>
+        <div class="p">от 29 999 ₽</div>
       </div>
       <div class="svc-row">
+        <div class="n">05</div>
         <h3>Выступления и лекции</h3>
-        <div class="desc">Конференции, корпоративные программы, бизнес-школы: инвестиции в недвижимость, Best Use, рынок ЗПИФ.</div>
-        <div class="price">по запросу<small>от 60 минут</small></div>
+        <div class="d">Конференции, корпоративные программы: инвестиции, Best Use, рынок ЗПИФ.</div>
+        <div class="p">по запросу</div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="bu" id="bestuse">
-  <div class="wrap">
-    <div class="rv">
-      <h2>Best Use: <em>какой проект должен стоять на этом месте?</em></h2>
-      <p>Один и тот же участок может приносить 8% годовых как склад — и 19% как торговая галерея. Best Use-анализ отвечает на главный вопрос девелопмента до того, как потрачены деньги на проектирование и стройку.</p>
-      <div class="cta-row">
-        <a class="btn btn-brass" href="#contact">Заказать анализ <span class="arr">→</span></a>
-        <a class="btn btn-ghost" href="../index.html">Научиться самому — курс</a>
-      </div>
-    </div>
-    <div class="bu-plan rv" aria-hidden="true">
-      <svg viewBox="0 0 440 360" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <pattern id="h1" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
-            <line x1="0" y1="0" x2="0" y2="8" stroke="var(--brass-2)" stroke-width="1" opacity=".5"/>
-          </pattern>
-        </defs>
-        <g stroke="var(--paper)" opacity=".08"><path d="M55 0V360M145 0V360M235 0V360M325 0V360M415 0V360"/><path d="M0 60H440M0 140H440M0 220H440M0 300H440"/></g>
-        <path d="M60 60 L360 44 L392 230 L296 300 L76 268 Z" fill="none" stroke="var(--muted-inv)" stroke-width="1.5"/>
-        <path d="M60 60 L360 44 L392 230 L296 300 L76 268 Z" fill="none" stroke="var(--brass-2)" stroke-width="1.4" stroke-dasharray="5 6"/>
-        <path d="M130 108 L300 96 L318 208 L226 262 L142 232 Z" fill="url(#h1)" stroke="var(--brass-2)" stroke-width="1.8"/>
-        <g font-family="Golos Text, Arial, sans-serif" font-size="12" fill="var(--muted-inv)">
-          <line x1="226" y1="180" x2="380" y2="330" stroke="var(--brass-2)" stroke-width="1"/>
-          <circle cx="226" cy="180" r="3.2" fill="var(--brass-2)"/>
-          <text x="270" y="345" fill="var(--paper)">IRR 19,2% — выбранный вариант</text>
-          <text x="64" y="52" opacity=".85">участок 0,84 га</text>
-        </g>
-      </svg>
+    <div class="cta-row">
+      <a class="btn" href="../index.html">Курс Best Use 2.0 <span class="arr">→</span></a>
+      <a class="btn btn-ol" href="https://t.me/atsogoev" target="_blank" rel="noopener">Telegram-канал</a>
     </div>
   </div>
 </section>
 
-<section class="book" id="book">
+<section class="final" id="contact">
   <div class="wrap">
-    <div class="book-cover rv" aria-hidden="true">
-      <svg viewBox="0 0 300 420" xmlns="http://www.w3.org/2000/svg">
-        <rect width="300" height="420" rx="4" fill="var(--pine)"/>
-        <rect x="0" y="0" width="14" height="420" fill="var(--pine-2)"/>
-        <rect x="34" y="46" width="70" height="4" fill="var(--brass-2)"/>
-        <text x="34" y="120" font-family="Georgia, serif" font-size="30" fill="var(--paper)">Как</text>
-        <text x="34" y="158" font-family="Georgia, serif" font-size="30" fill="var(--paper)">инвестировать</text>
-        <text x="34" y="196" font-family="Georgia, serif" font-size="30" fill="var(--brass-2)">в недвижимость</text>
-        <g stroke="var(--muted-inv)" fill="none" stroke-width="1.2" opacity=".7">
-          <path d="M34 300 V340 h30 V300 Z"/><path d="M74 340 V280 h30 V340 Z"/><path d="M114 340 V310 h30 V340 Z"/><path d="M154 340 V255 h30 V340 Z"/>
-        </g>
-        <text x="34" y="384" font-family="Golos Text, Arial, sans-serif" font-size="15" fill="var(--muted-inv)">Артём Цогоев</text>
-      </svg>
-    </div>
-    <div class="rv">
-      <h2>Книга «Как инвестировать в недвижимость»</h2>
-      <p>Системный взгляд на инвестиции в недвижимость: от первых сделок до портфельного подхода. Написана практиком — для тех, кто хочет считать, а не верить.</p>
-      <a class="btn btn-line" href="#contact">Где купить <span class="arr">→</span></a>
-    </div>
-  </div>
-</section>
-
-<section class="press" id="press">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <h2>Публикации и экспертиза в СМИ</h2>
-    </div>
-    <div class="press-list rv">
-      <div class="press-item"><b>Банки.ру</b><span>колумнист, авторские разборы рынка недвижимости</span></div>
-      <div class="press-item"><b>Investing.com</b><span>автор аналитических материалов</span></div>
-      <div class="press-item"><b>Отраслевые конференции</b><span>спикер: инвестиции, ЗПИФ, Best Use</span></div>
-      <div class="press-item"><b>Telegram</b><span>«Артем Цогоев | Недвижимость» — топ-20 каналов отрасли</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="tg">
-  <div class="wrap">
-    <h2 class="rv">Каждый день — о недвижимости без воды</h2>
-    <p class="rv">Инвестиционные идеи, разборы сделок, аналитика торговых помещений и стрит-ритейла, тренды рынка Москвы и Петербурга.</p>
-    <a class="btn btn-brass rv" href="https://t.me/atsogoev" target="_blank" rel="noopener">Подписаться на канал <span class="arr">→</span></a>
-  </div>
-</section>
-
-<section class="contact" id="contact">
-  <div class="wrap">
-    <div class="rv">
-      <h2>Обсудить задачу</h2>
-      <p>Опишите объект или вопрос — отвечу лично. Если задача не моя, скажу честно и подскажу, к кому идти.</p>
-    </div>
-    <div class="c-list rv">
-      <a href="https://t.me/TG_RealEstate_bot" target="_blank" rel="noopener"><b>Telegram</b><span>t.me/TG_RealEstate_bot</span></a>
-      <a href="https://t.me/atsogoev" target="_blank" rel="noopener"><b>Канал</b><span>@atsogoev</span></a>
-      <a href="#"><b>Email</b><span>указать адрес</span></a>
+    <h2 class="rv">Поймите риск — потом берите доходность</h2>
+    <p class="rv">Опишите объект или задачу — отвечу лично. Если задача не моя, скажу честно и подскажу, к кому идти.</p>
+    <div class="cta-row rv" style="justify-content:center">
+      <a class="btn" href="https://t.me/TG_RealEstate_bot" target="_blank" rel="noopener">Написать в Telegram <span class="arr">→</span></a>
+      <a class="btn btn-ol" href="https://t.me/atsogoev" target="_blank" rel="noopener">Читать канал</a>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div>© Артём Цогоев · инвестиции в недвижимость</div>
+    <div>© Артём Цогоев · DATA EDITION · демо-макет, все цифры иллюстративные</div>
     <div><a href="https://t.me/atsogoev" target="_blank" rel="noopener">@atsogoev</a></div>
   </div>
 </footer>
@@ -385,7 +390,7 @@ footer a:hover{border-color:var(--brass-2)}
 document.documentElement.classList.add('js');
 var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-},{threshold:.12}) : null;
+},{threshold:.1}) : null;
 document.querySelectorAll('.rv').forEach(function(el){
   if(io){ io.observe(el); } else { el.classList.add('in'); }
 });
