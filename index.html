@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Анализ Best Use 2.0 — программа Артёма Цогоева</title>
 <meta name="description" content="Методология определения наилучшего и наиболее эффективного использования недвижимости. Мини-группа 10 человек, лично с Артёмом Цогоевым.">
+<meta name="robots" content="noindex, nofollow, noarchive">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Анализ Best Use 2.0 — программа Артёма Цогоева">
 <meta property="og:description" content="Навык, за который рынок платит от 250 000 ₽ за проект. Мини-группа 10 человек, старт 31 августа. Демо-макет нового лендинга.">
@@ -451,16 +452,8 @@ footer a:hover{border-color:var(--brass)}
 
 <section class="author" id="author">
   <div class="wrap">
-    <div class="portrait rv" aria-hidden="true">
-      <!-- место под фото автора: заменить на реальный портрет -->
-      <svg viewBox="0 0 340 400" xmlns="http://www.w3.org/2000/svg">
-        <rect x="0" y="0" width="340" height="400" fill="var(--pine-3)"/>
-        <g fill="none" stroke="var(--muted-inv)" stroke-width="1.4" opacity=".8">
-          <circle cx="170" cy="150" r="46"/>
-          <path d="M96 330 C96 258 244 258 244 330"/>
-        </g>
-        <text x="170" y="368" text-anchor="middle" font-family="Golos Text, Arial, sans-serif" font-size="12" fill="var(--muted-inv)">место для портрета</text>
-      </svg>
+    <div class="portrait rv">
+      <img src="https://static.tildacdn.com/tild6361-3662-4730-b438-356363666639/-/resize/700x/tspng.png" alt="Артём Цогоев" style="display:block;width:100%;height:auto;background:var(--pine-3)">
     </div>
     <div class="rv">
       <h2>Артём Цогоев</h2>
@@ -586,26 +579,8 @@ footer a:hover{border-color:var(--brass)}
   </div>
 </footer>
 
-<!-- демо-панель выбора палитры: убрать при запуске, оставив выбранную -->
-<div class="palette-bar" role="group" aria-label="Выбор цветовой палитры">
-  <b>Палитра:</b>
-  <button class="pb-malachite on" data-p="" title="Малахит и латунь" aria-label="Малахит и латунь"></button>
-  <button class="pb-navy" data-p="navy" title="Чернильный синий и медь" aria-label="Чернильный синий и медь"></button>
-  <button class="pb-graphite" data-p="graphite" title="Графит и охра" aria-label="Графит и охра"></button>
-  <button class="pb-bordeaux" data-p="bordeaux" title="Бордо и золото" aria-label="Бордо и золото"></button>
-</div>
-
 <script>
 document.documentElement.classList.add('js');
-document.querySelectorAll('.palette-bar button').forEach(function(b){
-  b.addEventListener('click', function(){
-    var p = b.getAttribute('data-p');
-    if(p){ document.documentElement.setAttribute('data-palette', p); }
-    else { document.documentElement.removeAttribute('data-palette'); }
-    document.querySelectorAll('.palette-bar button').forEach(function(x){ x.classList.remove('on'); });
-    b.classList.add('on');
-  });
-});
 var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
   es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
 },{threshold:.12}) : null;
